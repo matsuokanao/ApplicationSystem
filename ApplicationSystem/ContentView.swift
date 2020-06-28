@@ -15,15 +15,19 @@ struct ContentView: View {
         session.listen()
     }
     
-    var body: some View {
-        Group{
-            if(session.session != nil){
-                Text("ようこそ")
-                Button(action: session.singOut){
-                    Text("ログアウト")
-                }
+var body: some View {
+    Group{
+        if(session.session != nil){
+                TabView{
+                    HomeView()
+                    .tabItem{Text("HOME")}
+                    ApplicationView()
+                    .tabItem{Text("試合申し込み")}
+                    UserSettingView()
+                    .tabItem{Text("ユーザー設定")}
+                    }
             }   else {
-                AuthView()
+                SignInView()
             }
         }.onAppear(perform: getUser)
     }

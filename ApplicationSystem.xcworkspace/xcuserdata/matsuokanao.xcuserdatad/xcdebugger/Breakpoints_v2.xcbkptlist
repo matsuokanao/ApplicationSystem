@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "AE543A52-4F5C-4C6A-9682-550C63B648B7"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "175F6FD3-202E-4407-8954-17B870A21E28"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ApplicationSystem/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "AppDelegate"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "175F6FD3-202E-4407-8954-17B870A21E28 - 3c36f6e7973b565d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApplicationSystem.AppDelegate.__deallocating_deinit"
+                  moduleName = "ApplicationSystem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuokanao/swift/ApplicationSystem/ApplicationSystem/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "175F6FD3-202E-4407-8954-17B870A21E28 - 934d8983905ccd29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApplicationSystem.AppDelegate.__allocating_init() -&gt; ApplicationSystem.AppDelegate"
+                  moduleName = "ApplicationSystem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuokanao/swift/ApplicationSystem/ApplicationSystem/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "175F6FD3-202E-4407-8954-17B870A21E28 - 8287b878a08a4311"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ApplicationSystem.AppDelegate.init() -&gt; ApplicationSystem.AppDelegate"
+                  moduleName = "ApplicationSystem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuokanao/swift/ApplicationSystem/ApplicationSystem/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "93">
+               </Location>
+               <Location
+                  uuid = "175F6FD3-202E-4407-8954-17B870A21E28 - 7b8d2cea70849721"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "main"
+                  moduleName = "ApplicationSystem"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matsuokanao/swift/ApplicationSystem/ApplicationSystem/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
