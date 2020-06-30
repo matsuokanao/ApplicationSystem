@@ -8,4 +8,6 @@ target 'ApplicationSystem' do
   # Pods for ApplicationSystem
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  
+  pod 'FirebaseUI/Email'
 end

@@ -8,26 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		98C1AF044813B9EA63A14AE4 /* Pods_ApplicationSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9675E7F579E2783C256A3A9 /* Pods_ApplicationSystem.framework */; };
+		A316D63E24AB1402009D4990 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316D63D24AB1402009D4990 /* Homescreen.swift */; };
+		A316D64024AB181A009D4990 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316D63F24AB181A009D4990 /* DiaryView.swift */; };
 		A366CEB924A8829F00A9D1C3 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */; };
 		A366CEBD24A882E700A9D1C3 /* ApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A366CEBC24A882E700A9D1C3 /* ApplicationView.swift */; };
-		A366CEC024A88A5F00A9D1C3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A366CEBF24A88A5F00A9D1C3 /* HomeView.swift */; };
 		A3753BE624A473820068E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE524A473820068E8F7 /* AppDelegate.swift */; };
 		A3753BE824A473820068E8F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE724A473820068E8F7 /* SceneDelegate.swift */; };
 		A3753BEA24A473820068E8F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE924A473820068E8F7 /* ContentView.swift */; };
 		A3753BEC24A473830068E8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3753BEB24A473830068E8F7 /* Assets.xcassets */; };
 		A3753BEF24A473830068E8F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3753BEE24A473830068E8F7 /* Preview Assets.xcassets */; };
 		A3753BF224A473830068E8F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3753BF024A473830068E8F7 /* LaunchScreen.storyboard */; };
-		A394E9BD24A84C0C002DC51E /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394E9BC24A84C0C002DC51E /* SignInView.swift */; };
-		A394E9BF24A84DEC002DC51E /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394E9BE24A84DEC002DC51E /* SignUpView.swift */; };
 		A3C4BC7124A582A10094BAD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */; };
-		A3C4BC7324A583560094BAD6 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C4BC7224A583560094BAD6 /* SessionStore.swift */; };
+		A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */; };
+		A3D2348224A9822D00A42665 /* GameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2348124A9822D00A42665 /* GameList.swift */; };
+		A3D2348424A9881600A42665 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2348324A9881600A42665 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F683B539A47DD42F137E0FF /* Pods-ApplicationSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationSystem.debug.xcconfig"; path = "Target Support Files/Pods-ApplicationSystem/Pods-ApplicationSystem.debug.xcconfig"; sourceTree = "<group>"; };
+		A316D63B24AAF851009D4990 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A316D63D24AB1402009D4990 /* Homescreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homescreen.swift; sourceTree = "<group>"; };
+		A316D63F24AB181A009D4990 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
 		A366CEBC24A882E700A9D1C3 /* ApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationView.swift; sourceTree = "<group>"; };
-		A366CEBF24A88A5F00A9D1C3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A3753BE224A473820068E8F7 /* ApplicationSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplicationSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3753BE524A473820068E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3753BE724A473820068E8F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,10 +39,10 @@
 		A3753BEE24A473830068E8F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3753BF124A473830068E8F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3753BF324A473830068E8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A394E9BC24A84C0C002DC51E /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		A394E9BE24A84DEC002DC51E /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A3C4BC7224A583560094BAD6 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		A3D2347F24A97CB400A42665 /* ApplicatioSystem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApplicatioSystem.xcdatamodel; sourceTree = "<group>"; };
+		A3D2348124A9822D00A42665 /* GameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameList.swift; sourceTree = "<group>"; };
+		A3D2348324A9881600A42665 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		C15C24FC2FD5C459D4BB97DD /* Pods-ApplicationSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationSystem.release.xcconfig"; path = "Target Support Files/Pods-ApplicationSystem/Pods-ApplicationSystem.release.xcconfig"; sourceTree = "<group>"; };
 		F9675E7F579E2783C256A3A9 /* Pods_ApplicationSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApplicationSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -97,14 +100,15 @@
 			children = (
 				A3753BE524A473820068E8F7 /* AppDelegate.swift */,
 				A3753BE924A473820068E8F7 /* ContentView.swift */,
-				A3C4BC7224A583560094BAD6 /* SessionStore.swift */,
-				A394E9BC24A84C0C002DC51E /* SignInView.swift */,
+				A3D2348124A9822D00A42665 /* GameList.swift */,
 				A3753BE724A473820068E8F7 /* SceneDelegate.swift */,
-				A394E9BE24A84DEC002DC51E /* SignUpView.swift */,
-				A366CEBF24A88A5F00A9D1C3 /* HomeView.swift */,
+				A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */,
 				A366CEBC24A882E700A9D1C3 /* ApplicationView.swift */,
+				A316D63D24AB1402009D4990 /* Homescreen.swift */,
 				A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */,
+				A3D2348324A9881600A42665 /* RegisterView.swift */,
 				A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */,
+				A316D63F24AB181A009D4990 /* DiaryView.swift */,
 				A3753BEB24A473830068E8F7 /* Assets.xcassets */,
 				A3753BF024A473830068E8F7 /* LaunchScreen.storyboard */,
 				A3753BF324A473830068E8F7 /* Info.plist */,
@@ -167,11 +171,11 @@
 			};
 			buildConfigurationList = A3753BDD24A473820068E8F7 /* Build configuration list for PBXProject "ApplicationSystem" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = en;
+			developmentRegion = ja;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				ja,
 			);
 			mainGroup = A3753BD924A473820068E8F7;
 			productRefGroup = A3753BE324A473820068E8F7 /* Products */;
@@ -244,14 +248,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A366CEC024A88A5F00A9D1C3 /* HomeView.swift in Sources */,
-				A394E9BD24A84C0C002DC51E /* SignInView.swift in Sources */,
+				A316D64024AB181A009D4990 /* DiaryView.swift in Sources */,
 				A3753BE624A473820068E8F7 /* AppDelegate.swift in Sources */,
-				A3C4BC7324A583560094BAD6 /* SessionStore.swift in Sources */,
-				A394E9BF24A84DEC002DC51E /* SignUpView.swift in Sources */,
 				A3753BE824A473820068E8F7 /* SceneDelegate.swift in Sources */,
 				A366CEB924A8829F00A9D1C3 /* UserSettingView.swift in Sources */,
+				A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */,
+				A3D2348224A9822D00A42665 /* GameList.swift in Sources */,
+				A3D2348424A9881600A42665 /* RegisterView.swift in Sources */,
 				A3753BEA24A473820068E8F7 /* ContentView.swift in Sources */,
+				A316D63E24AB1402009D4990 /* Homescreen.swift in Sources */,
 				A366CEBD24A882E700A9D1C3 /* ApplicationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +268,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				A3753BF124A473830068E8F7 /* Base */,
+				A316D63B24AAF851009D4990 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -334,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -446,6 +454,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3D2347F24A97CB400A42665 /* ApplicatioSystem.xcdatamodel */,
+			);
+			currentVersion = A3D2347F24A97CB400A42665 /* ApplicatioSystem.xcdatamodel */;
+			path = ApplicatioSystem.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A3753BDA24A473820068E8F7 /* Project object */;
 }

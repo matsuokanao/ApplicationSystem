@@ -7,10 +7,11 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ApplicationView: View {
     var body: some View {
-        Text("ApplicationView")
+        Text("試合に申し込む")
     }
 }
 

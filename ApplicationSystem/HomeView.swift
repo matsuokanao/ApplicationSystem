@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var session: SessionStore
+    @Environment(\.managedObjectContext) var viewContext
     
     var body: some View {
         Button(action: session.singOut){
