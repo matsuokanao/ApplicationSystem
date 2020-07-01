@@ -7,17 +7,19 @@
 //
 
 import SwiftUI
+import CoreData
+import Firebase
 
 
 struct RegisterView: View {
     
     var body: some View {
-        Text("RegisterView!")
+                 Text("試合名を入力して下さい")
     }
 }
-
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
+        
         RegisterView()
     }
 }

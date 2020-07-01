@@ -2,20 +2,15 @@
 //  HomeView.swift
 //  ApplicationSystem
 //
-//  Created by 松岡奈央 on 2020/06/28.
+//  Created by 松岡奈央 on 2020/07/01.
 //  Copyright © 2020 松岡奈央. All rights reserved.
 //
 
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var session: SessionStore
-    @Environment(\.managedObjectContext) var viewContext
-    
     var body: some View {
-        Button(action: session.singOut){
-        Text("ログアウトする")
-        }
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 

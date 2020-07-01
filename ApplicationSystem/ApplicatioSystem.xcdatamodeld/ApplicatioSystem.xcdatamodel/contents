@@ -2,10 +2,11 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="GameList" representedClassName=".GameList" syncable="YES">
         <attribute name="gamedate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="gameid" optional="YES" attributeType="String"/>
         <attribute name="gamename" optional="YES" attributeType="String"/>
         <attribute name="place" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="GameList" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="GameList" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>
