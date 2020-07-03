@@ -36,10 +36,6 @@ struct UserSettingView: View {
     var body: some View {
         
         ScrollView(.vertical){
-        ZStack{
-        ZStack(alignment: .topLeading) {
-            GeometryReader{_ in
-        
         VStack{
             Text("個人情報登録")
                 .font(.title)
@@ -80,25 +76,35 @@ struct UserSettingView: View {
                         TextField("住所を入力して下さい", text: self.$address)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 4).stroke(self.address != "" ? Color("PinkRed") : self.color,lineWidth:  2))
-                    Text("電話番号")
-                        TextField("住所をを入力して下さい", text: self.$phonenumber)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 4).stroke(self.phonenumber != "" ? Color("PinkRed") : self.color,lineWidth:  2))
-                
-                    Text("メールアドレス")
-                        TextField("メールアドレスを入力して下さい", text: self.$mails)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 4).stroke(self.mails != "" ? Color("PinkRed") : self.color,lineWidth:  2))
-                                }
-
-                            }
-                        }
+    Text("電話番号")
+    TextField("住所をを入力して下さい", text: self.$phonenumber)
+        .padding()
+        .background(RoundedRectangle(cornerRadius: 4).stroke(self.phonenumber != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+Text("メールアドレス")
+    TextField("メールアドレスを入力して下さい", text: self.$mails)
+    .padding()
+    .background(RoundedRectangle(cornerRadius: 4).stroke(self.mails != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+                        
+    //登録ボタンアクション
+    Button(action: {
+        //self.register()
+            }){
+        Text("登録")
+            .foregroundColor(.white)
+            .padding(.vertical)
+            .frame(width: UIScreen.main.bounds.width - 50)
+                }
+            .background(Color("PinkRed"))
+            .cornerRadius(10)
+            .padding(.top, 25)
                     }
                 }
             }
-        }
+        }.padding(.horizontal, 25)
     }
 }
+        
+    
 
 struct UserSettingView_Previews: PreviewProvider {
     static var previews: some View {

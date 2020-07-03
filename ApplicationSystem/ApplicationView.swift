@@ -53,7 +53,7 @@ struct CellViwe : View {
                     Image(systemName: "arrow.right").font(.body)
                         .foregroundColor(.black).padding(14)
                 }.sheet(isPresented: $showingDetail){
-                UserSettingView()
+                ApplicationRecordView()
                 }
                 .background(Color("PinkRed"))
                 .clipShape(Circle())
