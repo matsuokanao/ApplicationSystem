@@ -38,8 +38,6 @@ struct Home : View{
                     .tabItem{ Text("HOME")}
                 ApplicationView()
                     .tabItem{Text("試合に申し込む")}
-                DiaryView()
-                    .tabItem{Text("日記")}
         //TODO 管理者のみボタンが見えるようにする
                 RegisterView()
                     .tabItem{Text("試合を登録する")}

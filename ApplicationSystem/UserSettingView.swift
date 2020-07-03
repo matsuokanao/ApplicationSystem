@@ -9,6 +9,12 @@
 import SwiftUI
 
 struct UserSettingView: View {
+    @ObservedObject var gameaList = ApplicationViewModel()
+    
+    @State var firstName = ""
+    @State var rastName = ""
+    
+    
     var body: some View {
         Text("UserSettingView")
     }

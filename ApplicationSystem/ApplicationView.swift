@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 
 struct ApplicationView: View {
     @ObservedObject var gameaList = ApplicationViewModel()
+    
     var body: some View {
         VStack{
             if self.gameaList.datas.count != 0{
@@ -34,6 +35,7 @@ struct ApplicationView_Previews: PreviewProvider {
 }
 
 struct CellViwe : View {
+    @State var showingDetail = false
     var data : gamelist
     var body : some View{
         VStack{
@@ -46,11 +48,14 @@ struct CellViwe : View {
                 }
                 Spacer()
                 Button(action: {
-                    //TODO 申し込みページへ
+                    self.showingDetail.toggle()
                 }){
                     Image(systemName: "arrow.right").font(.body)
                         .foregroundColor(.black).padding(14)
-                }.background(Color("PinkRed"))
+                }.sheet(isPresented: $showingDetail){
+                UserSettingView()
+                }
+                .background(Color("PinkRed"))
                 .clipShape(Circle())
                 
             }.padding(.horizontal)
@@ -59,4 +64,5 @@ struct CellViwe : View {
         }.background(Color.white)
     }
 }
+
 

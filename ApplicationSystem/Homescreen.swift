@@ -10,6 +10,7 @@ import SwiftUI
 import Firebase
 
 struct Homescreen: View {
+    @State var showingDetail = false
     var body: some View {
         //登録後の画面
                 VStack{
@@ -29,6 +30,19 @@ struct Homescreen: View {
                             .foregroundColor(.white)
                             .padding(.vertical)
                             .frame(width: UIScreen.main.bounds.width - 50)
+                    }
+                    .background(Color("PinkRed"))
+                    .cornerRadius(10)
+                    .padding(.top, 25)
+                    
+                    
+                    Button(action: {self.showingDetail.toggle()} ){
+                    Text("個人情報を登録する")
+                    .foregroundColor(.white)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 50)
+                        }.sheet(isPresented: $showingDetail){
+                 UserSettingView()
                     }
                     .background(Color("PinkRed"))
                     .cornerRadius(10)
