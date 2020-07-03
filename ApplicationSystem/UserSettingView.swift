@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct UserSettingView: View {
-    @ObservedObject var gameaList = ApplicationViewModel()
+    @ObservedObject var gameaList = UsersListViewModel()
     
     @State var color = Color.black.opacity(0.7)
-    @State var firstName = ""
-    @State var lastName = ""
+    @State var firstname = ""
+    @State var lastname = ""
     @State var sex = ""
     //所属組織
     @State var belongTeam = ""
@@ -30,9 +30,6 @@ struct UserSettingView: View {
     //メールアドレス
     @State var mails = ""
     
-
-    
-    
     var body: some View {
         
         ScrollView(.vertical){
@@ -46,13 +43,13 @@ struct UserSettingView: View {
                 .padding(.top, 30)
             
             HStack{
-            TextField("名字", text: self.$firstName)
+            TextField("名字", text: self.$firstname)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(self.firstName != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(self.firstname != "" ? Color("PinkRed") : self.color,lineWidth:  2))
                             
-            TextField("名前", text: self.$lastName)
+            TextField("名前", text: self.$lastname)
                  .padding()
-                 .background(RoundedRectangle(cornerRadius: 4).stroke(self.lastName != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+                 .background(RoundedRectangle(cornerRadius: 4).stroke(self.lastname != "" ? Color("PinkRed") : self.color,lineWidth:  2))
             }
                 
                 VStack{
@@ -97,6 +94,7 @@ Text("メールアドレス")
             .background(Color("PinkRed"))
             .cornerRadius(10)
             .padding(.top, 25)
+                        
                     }
                 }
             }

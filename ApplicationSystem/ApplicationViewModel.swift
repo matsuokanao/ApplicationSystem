@@ -46,5 +46,59 @@ struct gamelist: Identifiable {
     
 }
 
+struct userlist {
+    var id: String
+    var firstname : String
+    var lastname : String
+    var sex : NumberFormatter
+    //所属組織
+    var belongTeam :String
+    //陸連
+    var belongPrefecture :String
+    //登録番号
+    var registrationnumber :NumberFormatter
+    //代表者名
+    var representativeName : String
+    //住所
+    var address : String
+    //電話番号
+    var phonenumber : NumberFormatter
+    //メールアドレス
+    var mails : String
+
+}
+
+class UsersListViewModel: ObservableObject {
+@Published var datas = [userlist]()
+init() {
+    let db = Firestore.firestore()
+
+    db.collection("userlist").addSnapshotListener { (snap, err) in
+        if err != nil {
+            print((err?.localizedDescription)!)
+            return
+        }
+        for i in snap!.documentChanges {
+
+            let id = i.document.documentID
+            let fiestname = i.document.get("fiestname") as! String
+            let lastname = i.document.get("lastname") as! String
+            let sex = i.document.get("sex") as! NumberFormatter
+            let belongTeam = i.document.get("belongTeam") as! String
+            let belongPrefecture = i.document.get("belongPrefecture") as! String
+            let registrationnumber = i.document.get("registrationnumber") as! NumberFormatter
+            let representativeName = i.document.get("representativeName") as! String
+            let address = i.document.get("address") as! String
+            let phonenumber = i.document.get("phonenumber") as! NumberFormatter
+            let mails = i.document.get("mails") as! String
+            
+            self.datas.append(userlist(id: id, firstname: fiestname, lastname: lastname, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, mails: mails))
+            }
+        }
+    
+    }
+}
+
+
 
 
