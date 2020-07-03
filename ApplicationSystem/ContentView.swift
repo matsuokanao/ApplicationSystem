@@ -333,7 +333,7 @@ struct SingUp : View {
         }
         .navigationBarBackButtonHidden(true)
     }
-    
+  //登録ボタンを押した時の処理
     func register(){
         if self.email != "" {
             
