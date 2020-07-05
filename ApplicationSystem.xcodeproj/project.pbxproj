@@ -21,6 +21,7 @@
 		A3753BF224A473830068E8F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3753BF024A473830068E8F7 /* LaunchScreen.storyboard */; };
 		A3996C9B24AECDF0007D3648 /* ApplicationRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */; };
 		A3996C9E24AED5C1007D3648 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3996CA024AED5C1007D3648 /* Localizable.strings */; };
+		A3B6BDB324B1914500142D6C /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B6BDB224B1914500142D6C /* UsersListViewModel.swift */; };
 		A3C4BC7124A582A10094BAD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */; };
 		A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */; };
 		A3D2348424A9881600A42665 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2348324A9881600A42665 /* RegisterView.swift */; };
@@ -43,6 +44,7 @@
 		A3753BF324A473830068E8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRecordView.swift; sourceTree = "<group>"; };
 		A3996C9F24AED5C1007D3648 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3B6BDB224B1914500142D6C /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
 		A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3D2347F24A97CB400A42665 /* ApplicatioSystem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApplicatioSystem.xcdatamodel; sourceTree = "<group>"; };
 		A3D2348324A9881600A42665 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -104,12 +106,13 @@
 				A3753BE524A473820068E8F7 /* AppDelegate.swift */,
 				A3753BE724A473820068E8F7 /* SceneDelegate.swift */,
 				A3753BE924A473820068E8F7 /* ContentView.swift */,
-				A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */,
 				A316D63D24AB1402009D4990 /* Homescreen.swift */,
 				A3D2348324A9881600A42665 /* RegisterView.swift */,
+				A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */,
 				A3179BA324AC7D210066FFAF /* ApplicationView.swift */,
 				A3179B9D24AC5A070066FFAF /* ApplicationViewModel.swift */,
 				A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */,
+				A3B6BDB224B1914500142D6C /* UsersListViewModel.swift */,
 				A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */,
 				A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */,
 				A3753BEB24A473830068E8F7 /* Assets.xcassets */,
@@ -260,6 +263,7 @@
 				A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */,
 				A3D2348424A9881600A42665 /* RegisterView.swift in Sources */,
 				A3179BA424AC7D210066FFAF /* ApplicationView.swift in Sources */,
+				A3B6BDB324B1914500142D6C /* UsersListViewModel.swift in Sources */,
 				A3753BEA24A473820068E8F7 /* ContentView.swift in Sources */,
 				A316D63E24AB1402009D4990 /* Homescreen.swift in Sources */,
 			);
