@@ -27,13 +27,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             if let windowScene = scene as? UIWindowScene {
                 let window = UIWindow(windowScene: windowScene)
                 
-                let managedObjectContext
+                let context
                     = (UIApplication.shared.delegate as! AppDelegate)
                         .persistentContainer.viewContext
 
                 let contentView
                     = ContentView().environment(\.managedObjectContext,
-                                    managedObjectContext)
+                                    context)
 
                 
             window.rootViewController = UIHostingController(rootView: contentView)

@@ -10,7 +10,6 @@
 		98C1AF044813B9EA63A14AE4 /* Pods_ApplicationSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9675E7F579E2783C256A3A9 /* Pods_ApplicationSystem.framework */; };
 		A316D63E24AB1402009D4990 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316D63D24AB1402009D4990 /* Homescreen.swift */; };
 		A3179B9624AC27D00066FFAF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A3179B9524AC27D00066FFAF /* SDWebImageSwiftUI */; };
-		A3179B9E24AC5A070066FFAF /* ApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3179B9D24AC5A070066FFAF /* ApplicationViewModel.swift */; };
 		A3179BA424AC7D210066FFAF /* ApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3179BA324AC7D210066FFAF /* ApplicationView.swift */; };
 		A366CEB924A8829F00A9D1C3 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */; };
 		A3753BE624A473820068E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE524A473820068E8F7 /* AppDelegate.swift */; };
@@ -21,17 +20,17 @@
 		A3753BF224A473830068E8F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3753BF024A473830068E8F7 /* LaunchScreen.storyboard */; };
 		A3996C9B24AECDF0007D3648 /* ApplicationRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */; };
 		A3996C9E24AED5C1007D3648 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3996CA024AED5C1007D3648 /* Localizable.strings */; };
+		A3A08DF224B2E87E0021B239 /* ApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A08DF124B2E87E0021B239 /* ApplicationViewModel.swift */; };
+		A3A08DF424B2FC390021B239 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A08DF324B2FC390021B239 /* RegisterView.swift */; };
 		A3B6BDB324B1914500142D6C /* UsersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B6BDB224B1914500142D6C /* UsersListViewModel.swift */; };
 		A3C4BC7124A582A10094BAD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */; };
 		A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */; };
-		A3D2348424A9881600A42665 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D2348324A9881600A42665 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3F683B539A47DD42F137E0FF /* Pods-ApplicationSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationSystem.debug.xcconfig"; path = "Target Support Files/Pods-ApplicationSystem/Pods-ApplicationSystem.debug.xcconfig"; sourceTree = "<group>"; };
 		A316D63B24AAF851009D4990 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A316D63D24AB1402009D4990 /* Homescreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homescreen.swift; sourceTree = "<group>"; };
-		A3179B9D24AC5A070066FFAF /* ApplicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewModel.swift; sourceTree = "<group>"; };
 		A3179BA324AC7D210066FFAF /* ApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationView.swift; sourceTree = "<group>"; };
 		A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
 		A3753BE224A473820068E8F7 /* ApplicationSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplicationSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,10 +43,11 @@
 		A3753BF324A473830068E8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRecordView.swift; sourceTree = "<group>"; };
 		A3996C9F24AED5C1007D3648 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A3A08DF124B2E87E0021B239 /* ApplicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewModel.swift; sourceTree = "<group>"; };
+		A3A08DF324B2FC390021B239 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		A3B6BDB224B1914500142D6C /* UsersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListViewModel.swift; sourceTree = "<group>"; };
 		A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3D2347F24A97CB400A42665 /* ApplicatioSystem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApplicatioSystem.xcdatamodel; sourceTree = "<group>"; };
-		A3D2348324A9881600A42665 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		C15C24FC2FD5C459D4BB97DD /* Pods-ApplicationSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationSystem.release.xcconfig"; path = "Target Support Files/Pods-ApplicationSystem/Pods-ApplicationSystem.release.xcconfig"; sourceTree = "<group>"; };
 		F9675E7F579E2783C256A3A9 /* Pods_ApplicationSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApplicationSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,12 +107,12 @@
 				A3753BE724A473820068E8F7 /* SceneDelegate.swift */,
 				A3753BE924A473820068E8F7 /* ContentView.swift */,
 				A316D63D24AB1402009D4990 /* Homescreen.swift */,
-				A3D2348324A9881600A42665 /* RegisterView.swift */,
+				A3A08DF324B2FC390021B239 /* RegisterView.swift */,
 				A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */,
-				A3179BA324AC7D210066FFAF /* ApplicationView.swift */,
-				A3179B9D24AC5A070066FFAF /* ApplicationViewModel.swift */,
-				A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */,
 				A3B6BDB224B1914500142D6C /* UsersListViewModel.swift */,
+				A3179BA324AC7D210066FFAF /* ApplicationView.swift */,
+				A3A08DF124B2E87E0021B239 /* ApplicationViewModel.swift */,
+				A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */,
 				A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */,
 				A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */,
 				A3753BEB24A473830068E8F7 /* Assets.xcassets */,
@@ -255,13 +255,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3179B9E24AC5A070066FFAF /* ApplicationViewModel.swift in Sources */,
+				A3A08DF424B2FC390021B239 /* RegisterView.swift in Sources */,
 				A3753BE624A473820068E8F7 /* AppDelegate.swift in Sources */,
+				A3A08DF224B2E87E0021B239 /* ApplicationViewModel.swift in Sources */,
 				A3753BE824A473820068E8F7 /* SceneDelegate.swift in Sources */,
 				A366CEB924A8829F00A9D1C3 /* UserSettingView.swift in Sources */,
 				A3996C9B24AECDF0007D3648 /* ApplicationRecordView.swift in Sources */,
 				A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */,
-				A3D2348424A9881600A42665 /* RegisterView.swift in Sources */,
 				A3179BA424AC7D210066FFAF /* ApplicationView.swift in Sources */,
 				A3B6BDB324B1914500142D6C /* UsersListViewModel.swift in Sources */,
 				A3753BEA24A473820068E8F7 /* ContentView.swift in Sources */,

@@ -8,31 +8,33 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import FirebaseFirestore
 
 struct ApplicationView: View {
-    @ObservedObject var gameaList = ApplicationViewModel()
-    
+    @ObservedObject var data = getData()
     var body: some View {
         VStack{
-            if self.gameaList.datas.count != 0{
-                ScrollView(.vertical, showsIndicators: false){
-                    VStack{
-                        ForEach(self.gameaList.datas){i in
-                            CellViwe(data: i)
-                        }
-                    }.padding()
-                }.background(Color("PinkRed"))
-                    .edgesIgnoringSafeArea(.all)
+                    if self.data.datas.count != 0{
+                        ScrollView(.vertical, showsIndicators: false){
+                            VStack{
+                                ForEach(self.data.datas){i in
+                                    CellViwe(data: i)
+                                    
+                                }
+                            }.padding()
+                        }.background(Color("PinkRed"))
+                            .edgesIgnoringSafeArea(.all)
+                    }
+                }
             }
         }
-    }
-}
 
 struct ApplicationView_Previews: PreviewProvider {
     static var previews: some View {
         ApplicationView()
     }
 }
+
 
 struct CellViwe : View {
     @State var showingDetail = false
@@ -65,4 +67,45 @@ struct CellViwe : View {
     }
 }
 
+
+
+class getData : ObservableObject{
+    
+    @Published var datas = [gamelist]()
+    
+    init() {
+        
+        let db = Firestore.firestore()
+        
+        db.collection("gamelist").getDocuments { (snap, err) in
+            
+            if err != nil{
+                
+                print((err?.localizedDescription)!)
+                return
+            }
+            
+            for i in snap!.documents{
+                
+                let id = i.documentID
+                let gamename = i.get("gamename") as! String
+                let gamevenue = i.get("gamevenue") as! String
+                let place = i.get("place") as! String
+                let png = i.get("png") as! String
+                
+                self.datas.append(gamelist(id: id, gamename: gamename, gamevenue: gamevenue, place: place, png: png))
+            }
+        }
+    }
+}
+
+
+struct gamelist: Identifiable {
+    var id: String
+    var gamename: String
+    var gamevenue: String
+    var place: String
+    var png: String
+    
+        }
 

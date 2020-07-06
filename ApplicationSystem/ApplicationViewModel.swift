@@ -2,7 +2,7 @@
 //  ApplicationViewModel.swift
 //  ApplicationSystem
 //
-//  Created by 松岡奈央 on 2020/07/01.
+//  Created by 松岡奈央 on 2020/07/06.
 //  Copyright © 2020 松岡奈央. All rights reserved.
 //
 
@@ -12,37 +12,37 @@ import FirebaseFirestore
 
 
 class ApplicationViewModel: ObservableObject {
-    @Published var datas = [gamelist]()
-
-    init() {
-        let db = Firestore.firestore()
-
-        db.collection("gamelist").addSnapshotListener { (snap, err) in
-            if err != nil {
-                print((err?.localizedDescription)!)
+    
+    var db = Firestore.firestore()
+    //データの書き込み
+    func addUser(gamename: String , gamevenue: String,place: String,png: String) {
+        let data = [
+            "gamename": gamename,
+            "gamevenue": gamevenue,
+            "place": place,
+            "png": png,
+            "aaa":"aaa"
+            ]
+        db.collection("gamelist").addDocument(data: data) { error in
+            if let error = error {
+                print(error.localizedDescription)
                 return
             }
-            for i in snap!.documentChanges {
 
-                let id = i.document.documentID
-                let gamename = i.document.get("gamename") as! String
-                let gamevenue = i.document.get("gamevenue") as! String
-                let place = i.document.get("place") as! String
-                let png = i.document.get("png") as! String
-
-                self.datas.append(gamelist(id: id, gamename: gamename, gamevenue: gamevenue, place: place,png: png))
+            print("success")
+        }
+    
+//データの読み込み
+func getUser() {
+    db.collection("gamelist").getDocuments(){(snaps, err) in
+        if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in snaps!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
             }
         }
     }
 }
-
-
-struct gamelist: Identifiable {
-    var id: String
-    var gamename: String
-    var gamevenue: String
-    var place: String
-    var png: String
-    
 }
-

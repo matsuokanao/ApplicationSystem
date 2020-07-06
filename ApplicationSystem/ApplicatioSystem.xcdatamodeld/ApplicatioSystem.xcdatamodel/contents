@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="GameList" representedClassName=".GameList" syncable="YES">
-        <attribute name="gamedate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="gameid" optional="YES" attributeType="String"/>
+    <entity name="Register" representedClassName="Register" syncable="YES" codeGenerationType="class">
         <attribute name="gamename" optional="YES" attributeType="String"/>
-        <attribute name="place" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UserList" representedClassName=".userlist" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="belongprefecture" optional="YES" attributeType="String"/>
+        <attribute name="belongteam" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstname" optional="YES" attributeType="String"/>
+        <attribute name="lastname" optional="YES" attributeType="String"/>
+        <attribute name="phonenumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="registrationnumber" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="representativename" optional="YES" attributeType="String"/>
+        <attribute name="sex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="GameList" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Register" positionX="-63" positionY="9" width="128" height="58"/>
+        <element name="UserList" positionX="-63" positionY="-18" width="128" height="193"/>
     </elements>
 </model>

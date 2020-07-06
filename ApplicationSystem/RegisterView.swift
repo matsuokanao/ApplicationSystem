@@ -8,54 +8,65 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
+import Firebase
+import FirebaseFirestore
+
 
 struct RegisterView: View {
     
     @ObservedObject var gameaList = ApplicationViewModel()
     @State var showingAlert = false
     @State var gamename = ""
-    @State var gamedate = Date()
-    @State var selected = 0
-    var place = ["東京","神奈川","埼玉","千葉","香川"]
+    @State var date = Date()
+    @State var place = ""
+    @State var gamevenue = ""
+    @State var png = ""
+    
     
     var body: some View {
+        
         NavigationView{
             Form{
                 Section(header: Text("試合名")){
                     TextField("試合名を入力して下さい",text: $gamename)
                 }
                 Section(header: Text("試合日程")){
-                    DatePicker(selection: $gamedate, displayedComponents: [.date],
+                    DatePicker(selection: $date, displayedComponents: [.date],
                         label:{ Text("試合日程を入力して下さい")})
                 }
-                Section(header: Text("試合会場")){
-                    Picker(selection: $selected, label: Text("都道府県を入力して下さい"))
-                    {
-                        ForEach(0..<place.count){
-                            Text(self.place[$0])
-                        }
-                    }
+                Section(header: Text("都道府県")){
+                    TextField("試合名を入力して下さい",text: $place)
                 }
+                Section(header: Text("試合会場")){
+                TextField("試合名を入力して下さい",text: $gamevenue)
+                }
+                
+                Section(header: Text("試合要項（画像のURLを貼って下さい）")){
+                TextField("試合要項画像のURLをお貼り下さい",text: $png)
+                }
+
                 Section{
+                   // ForEach(self.gameaList.datas){i in
+
                     Button(action: {
-                        self.showingAlert = true
+                        self.gameaList.addUser(gamename: self.gamename, gamevenue: self.gamevenue, place: self.place, png: self.png)
+                        
                     }){
                         Text("確定")
-                    }.alert(isPresented: $showingAlert){
-                        Alert(title: Text("確認"),
-                            message:Text("試合を登録します。よろしいですか？"),
-                            dismissButton:.default(Text("登録")))
                     }
                 }
             }.navigationBarTitle("試合登録")
             .foregroundColor(Color("PinkRed"))
             Spacer()
+            }
         }
     }
-}
+//}
+
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
         
         RegisterView()
     }
 }
+
