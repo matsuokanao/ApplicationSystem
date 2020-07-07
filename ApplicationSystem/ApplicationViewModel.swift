@@ -15,13 +15,12 @@ class ApplicationViewModel: ObservableObject {
     
     var db = Firestore.firestore()
     //データの書き込み
-    func addUser(gamename: String , gamevenue: String,place: String,png: String) {
+    func addGame( gamename: String , gamevenue: String,place: String,png: String) {
         let data = [
             "gamename": gamename,
             "gamevenue": gamevenue,
             "place": place,
             "png": png,
-            "aaa":"aaa"
             ]
         db.collection("gamelist").addDocument(data: data) { error in
             if let error = error {
@@ -31,18 +30,6 @@ class ApplicationViewModel: ObservableObject {
 
             print("success")
         }
-    
-//データの読み込み
-func getUser() {
-    db.collection("gamelist").getDocuments(){(snaps, err) in
-        if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in snaps!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                }
-            }
-        }
     }
 }
-}
+

@@ -35,50 +35,10 @@ struct userlist {
 
 
 class UsersListViewModel: ObservableObject {
-@Published var userdatas = [userlist]()
-@Published var noData = false
-    
-init() {
-    let db = Firestore.firestore()
 
-    db.collection("userlist").addSnapshotListener { (snap, err) in
-        if err != nil {
-            print((err?.localizedDescription)!)
-            self.noData = true
-            return
-        }
-        
-        if (snap?.documentChanges.isEmpty)!{
-            
-            self.noData = true
-            return
-        }
-        
-        for i in snap!.documentChanges {
-            
-                    let id = i.document.documentID
-                    let fiestname = i.document.get("fiestname") as! String
-                    let lastname = i.document.get("lastname") as! String
-                    let sex = i.document.get("sex") as! NSNumber
-                    let belongTeam = i.document.get("belongTeam") as! String
-                    let belongPrefecture = i.document.get("belongPrefecture") as! String
-                    let registrationnumber = i.document.get("registrationnumber") as! NSNumber
-                    let representativeName = i.document.get("representativeName") as! String
-                    let address = i.document.get("address") as! String
-                    let phonenumber = i.document.get("phonenumber") as! NSNumber
-                    let mails = i.document.get("mails") as! String
-                    
-                    self.userdatas.append(userlist(id: id, firstname: fiestname, lastname: lastname, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, mails: mails))
-                    
-                }
-            }
-        }
-    
-
-
-
-
-func addUser(firstname: String, lastname: String, sex: NSNumber, belongTeam: String, belongPrefecture: String, registrationnumber: NSNumber, representativeName: String, address: String, phonenumber: NSNumber, mails: String) {
+    var db = Firestore.firestore()
+        //データの書き込み
+    func addUser(firstname:String, lastname:String, sex:String, belongTeam:String, belongPrefecture:String, registrationnumber:String, representativeName:String, address:String,phonenumber:String, email:String) {
         let data : [String:Any] = [
             "firstname": firstname,
             "lastname": lastname,
@@ -89,19 +49,29 @@ func addUser(firstname: String, lastname: String, sex: NSNumber, belongTeam: Str
             "representativeName": representativeName,
             "address": address,
             "phonenumber": phonenumber,
-            "mails": mails
+            "email": email
         ]
-
-    let db  = Firestore.firestore()
-
-        db.collection("userlist").addDocument(data: data) { error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
+    db.collection("userlist").addDocument(data: data) { error in
+        if let error = error {
+            print(error.localizedDescription)
+            return
             }
-
             print("success")
         }
     }
 }
+
+        
+
+
+   
+        
+
+
+
+
+
+
+
+    
 

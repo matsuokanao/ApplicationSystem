@@ -6,15 +6,12 @@
 //  Copyright © 2020 松岡奈央. All rights reserved.
 //
 
+import Foundation
+import FirebaseFirestore
 import SwiftUI
 
 struct ApplicationRecordView: View {
     @ObservedObject var gameaList = ApplicationViewModel()
-
-    //種目
-    @State var event = ""
-    @State var sex = ""
-    @State var showingDetail = false
     
     var body: some View {
         Text("aaa")
@@ -27,3 +24,4 @@ struct ApplicationRecordView_Previews: PreviewProvider {
         ApplicationRecordView()
     }
 }
+

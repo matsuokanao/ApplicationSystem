@@ -49,8 +49,8 @@ struct RegisterView: View {
                    // ForEach(self.gameaList.datas){i in
 
                     Button(action: {
-                        self.gameaList.addUser(gamename: self.gamename, gamevenue: self.gamevenue, place: self.place, png: self.png)
-                        
+                        self.gameaList.addGame(gamename: self.gamename, gamevenue: self.gamevenue, place: self.place, png: self.png)
+    
                     }){
                         Text("確定")
                     }

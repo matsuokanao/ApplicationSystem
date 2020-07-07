@@ -37,7 +37,7 @@ struct ApplicationView_Previews: PreviewProvider {
 
 
 struct CellViwe : View {
-    @State var showingDetail = false
+    @State var show = false
     var data : gamelist
     var body : some View{
         VStack{
@@ -50,23 +50,30 @@ struct CellViwe : View {
                 }
                 Spacer()
                 Button(action: {
-                    self.showingDetail.toggle()
-                }){
-                    Image(systemName: "arrow.right").font(.body)
-                        .foregroundColor(.black).padding(14)
-                }.sheet(isPresented: $showingDetail){
-                ApplicationRecordView()
-                }
-                .background(Color("PinkRed"))
-                .clipShape(Circle())
-                
-            }.padding(.horizontal)
-                .padding(.bottom,6)
-            
+                                    
+            self.show.toggle()
+                }) {
+                                
+        Image(systemName: "arrow.right")
+            .font(.body)
+            .foregroundColor(.black)
+            .padding(14)
+                            
+        }.background(Color.yellow)
+            .clipShape(Circle())
+                            
+        }.padding(.horizontal)
+            .padding(.bottom,6)
+                            
         }.background(Color.white)
+        .cornerRadius(20)
+        .sheet(isPresented: self.$show) {
+                                
+        ApplicationRecordView()
+        }
     }
 }
-
+                
 
 
 class getData : ObservableObject{
