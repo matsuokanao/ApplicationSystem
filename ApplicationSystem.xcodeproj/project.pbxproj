@@ -18,7 +18,6 @@
 		A3753BEC24A473830068E8F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3753BEB24A473830068E8F7 /* Assets.xcassets */; };
 		A3753BEF24A473830068E8F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3753BEE24A473830068E8F7 /* Preview Assets.xcassets */; };
 		A3753BF224A473830068E8F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3753BF024A473830068E8F7 /* LaunchScreen.storyboard */; };
-		A3996C9B24AECDF0007D3648 /* ApplicationRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */; };
 		A3996C9E24AED5C1007D3648 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3996CA024AED5C1007D3648 /* Localizable.strings */; };
 		A3A08DF224B2E87E0021B239 /* ApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A08DF124B2E87E0021B239 /* ApplicationViewModel.swift */; };
 		A3A08DF424B2FC390021B239 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A08DF324B2FC390021B239 /* RegisterView.swift */; };
@@ -41,7 +40,6 @@
 		A3753BEE24A473830068E8F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A3753BF124A473830068E8F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3753BF324A473830068E8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRecordView.swift; sourceTree = "<group>"; };
 		A3996C9F24AED5C1007D3648 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A3A08DF124B2E87E0021B239 /* ApplicationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationViewModel.swift; sourceTree = "<group>"; };
 		A3A08DF324B2FC390021B239 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				A3B6BDB224B1914500142D6C /* UsersListViewModel.swift */,
 				A3179BA324AC7D210066FFAF /* ApplicationView.swift */,
 				A3A08DF124B2E87E0021B239 /* ApplicationViewModel.swift */,
-				A3996C9A24AECDF0007D3648 /* ApplicationRecordView.swift */,
 				A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */,
 				A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */,
 				A3753BEB24A473830068E8F7 /* Assets.xcassets */,
@@ -260,7 +257,6 @@
 				A3A08DF224B2E87E0021B239 /* ApplicationViewModel.swift in Sources */,
 				A3753BE824A473820068E8F7 /* SceneDelegate.swift in Sources */,
 				A366CEB924A8829F00A9D1C3 /* UserSettingView.swift in Sources */,
-				A3996C9B24AECDF0007D3648 /* ApplicationRecordView.swift in Sources */,
 				A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */,
 				A3179BA424AC7D210066FFAF /* ApplicationView.swift in Sources */,
 				A3B6BDB324B1914500142D6C /* UsersListViewModel.swift in Sources */,

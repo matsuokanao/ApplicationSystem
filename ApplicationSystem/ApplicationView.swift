@@ -7,8 +7,8 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 import FirebaseFirestore
+import WebKit
 
 struct ApplicationView: View {
     @ObservedObject var data = getData()
@@ -41,7 +41,10 @@ struct CellViwe : View {
     var data : gamelist
     var body : some View{
         VStack{
-            AnimatedImage(url: URL(string: data.png)!).resizable().frame(height: 400)
+                WebView(loadUrl: self.data.png).frame(height: 400)
+            
+
+          // AnimatedImage(url: URL(string: data.png)!).resizable().frame(height: 400)
             
             HStack{
                 VStack(alignment: .leading){
@@ -68,8 +71,8 @@ struct CellViwe : View {
         }.background(Color.white)
         .cornerRadius(20)
         .sheet(isPresented: self.$show) {
-                                
-        ApplicationRecordView()
+          Spacer()
+            ApplicationRecordView(data: self.data)
         }
     }
 }
@@ -81,7 +84,6 @@ class getData : ObservableObject{
     @Published var datas = [gamelist]()
     
     init() {
-        
         let db = Firestore.firestore()
         
         db.collection("gamelist").getDocuments { (snap, err) in
@@ -116,3 +118,96 @@ struct gamelist: Identifiable {
     
         }
 
+struct ApplicationRecordView : View {
+    
+    var data : gamelist
+    @State var cash = false
+    @State var quick = false
+    @State var quantity = 0
+    @Environment(\.presentationMode) var presentation
+    
+    var body : some View{
+        
+        VStack(alignment: .leading, spacing: 15){
+            
+            WebView(loadUrl: self.data.png)
+                .frame(height: UIScreen.main.bounds.height / 2 - 100)
+            
+            VStack(alignment: .leading, spacing: 25) {
+                
+                Text(data.gamename).fontWeight(.heavy).font(.title)
+                Text(data.place).fontWeight(.heavy).font(.body)
+                
+                Toggle(isOn : $cash){
+                    
+                    Text("Cash On Delivery")
+                }
+                
+                Toggle(isOn : $quick){
+                    
+                    Text("Quick Delivery")
+                }
+                
+                Stepper(onIncrement: {
+                    
+                    self.quantity += 1
+                    
+                }, onDecrement: {
+                
+                    if self.quantity != 0{
+                        
+                        self.quantity -= 1
+                    }
+                }) {
+                    
+                    Text("Quantity \(self.quantity)")
+                }
+                
+                Button(action: {
+                    
+                    let db = Firestore.firestore()
+                    //試合申し込み完了テーブルに入れる
+                    db.collection("Complete")
+                        .document()
+                        .setData(["item":self.data.gamename,"quantity":self.quantity,"quickdelivery":self.quick,"cashondelivery":self.cash,"pic":self.data.place]) { (err) in
+                            
+                            if err != nil{
+                                
+                                print((err?.localizedDescription)!)
+                                return
+                            }
+                            
+                            // it will dismiss the recently presented modal....
+                            
+                            self.presentation.wrappedValue.dismiss()
+                    }
+                    
+                    
+                }) {
+                    
+                    Text("申し込む")
+                        .padding(.vertical)
+                        .frame(width: UIScreen.main.bounds.width - 30)
+                    
+                }.background(Color.orange)
+                .foregroundColor(.white)
+                .cornerRadius(20)
+                
+            }.padding()
+            
+            Spacer()
+        }
+    }
+}
+
+struct WebView: UIViewRepresentable {
+    var loadUrl:String
+
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
+    }
+
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        uiView.load(URLRequest(url: URL(string: loadUrl)!))
+    }
+}
