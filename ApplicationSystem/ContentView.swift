@@ -41,6 +41,8 @@ struct Home : View{
         //TODO 管理者のみボタンが見えるようにする
                 RegisterView()
                     .tabItem{Text("試合を登録する")}
+                InformationView()
+                    .tabItem{Text("エントリー")}
                 }
             } else {
                 ZStack{

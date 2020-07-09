@@ -11,23 +11,50 @@ import FirebaseFirestore
 
 
 class CompleteViewModel: ObservableObject {
-    
-    var db = Firestore.firestore()
-    //データの書き込み
-    func addCompleteGame( gamename: String , gamevenue: String,place: String,png: String) {
-        let data:[String:Any] = [
-            "gamename": gamename,
-            "gamevenue": gamevenue,
-            "place": place,
-            "png": png,
-            ]
-        db.collection("completegame").addDocument(data: data) { error in
-            if let error = error {
-                print(error.localizedDescription)
-                return
-            }
+@Published var completedata = [completelist]()
+         init() {
+             
+             let db = Firestore.firestore()
+             
+             db.collection("complete").order(by: "date", descending: false).addSnapshotListener { (snap, err) in
+                 
+                 if err != nil{
+                     print((err?.localizedDescription)!)
+                     return
+                 }
+                 
+                 if (snap?.documentChanges.isEmpty)!{
+                     return
+                 }
+                 
+        for i in snap!.documentChanges{
+            if i.type == .added{
+                         
+            let id = i.document.documentID
+                         
+            let completegamename = i.document.get("completegamename") as! String
+                let completegamevenue = i.document.get("completegamevenue") as! String
+                let completeplace = i.document.get("completeplace") as! String
+                let event1 = i.document.get("event1") as! String
+                let event2 = i.document.get("event2") as! String
+                let event3 = i.document.get("event3") as! String
+            self.completedata.append(complete(id: id, completegamename: completegamename, completegamevenue: completegamevenue, completeplace: completeplace, event1: event1, event2: event2, event3: event3))
+                     }
+                 }
+             }
+         }
+     }
 
-            print("success")
-        }
-    }
+    
+
+struct completelist: Identifiable {
+var id: String
+var completegamename: String
+var completegamevenue: String
+var completeplace: String
+var event1: String
+var event2: String
+var event3: String
 }
+
+

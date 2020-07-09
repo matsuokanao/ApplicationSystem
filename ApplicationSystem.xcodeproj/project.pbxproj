@@ -21,11 +21,12 @@
 		A3996C9E24AED5C1007D3648 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A3996CA024AED5C1007D3648 /* Localizable.strings */; };
 		A3A08DF224B2E87E0021B239 /* NewGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A08DF124B2E87E0021B239 /* NewGameData.swift */; };
 		A3A08DF424B2FC390021B239 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A08DF324B2FC390021B239 /* RegisterView.swift */; };
-		A3ADB55024B461A9004F5543 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADB54F24B461A9004F5543 /* CompleteView.swift */; };
 		A3ADB55224B46E4B004F5543 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADB55124B46E4B004F5543 /* GameData.swift */; };
-		A3ADB55424B473B2004F5543 /* CompleteGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADB55324B473B2004F5543 /* CompleteGameData.swift */; };
 		A3B6BDB324B1914500142D6C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B6BDB224B1914500142D6C /* UserData.swift */; };
 		A3C4BC7124A582A10094BAD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */; };
+		A3C9ADD524B600EA00D78F07 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9ADD424B600EA00D78F07 /* InformationView.swift */; };
+		A3C9ADD724B60F6500D78F07 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9ADD624B60F6500D78F07 /* InformationData.swift */; };
+		A3C9ADD924B6111000D78F07 /* CompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9ADD824B6111000D78F07 /* CompleteView.swift */; };
 		A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
@@ -46,11 +47,12 @@
 		A3996C9F24AED5C1007D3648 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A3A08DF124B2E87E0021B239 /* NewGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameData.swift; sourceTree = "<group>"; };
 		A3A08DF324B2FC390021B239 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		A3ADB54F24B461A9004F5543 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		A3ADB55124B46E4B004F5543 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
-		A3ADB55324B473B2004F5543 /* CompleteGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteGameData.swift; sourceTree = "<group>"; };
 		A3B6BDB224B1914500142D6C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A3C9ADD424B600EA00D78F07 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
+		A3C9ADD624B60F6500D78F07 /* InformationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
+		A3C9ADD824B6111000D78F07 /* CompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteView.swift; sourceTree = "<group>"; };
 		A3D2347F24A97CB400A42665 /* ApplicatioSystem.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ApplicatioSystem.xcdatamodel; sourceTree = "<group>"; };
 		C15C24FC2FD5C459D4BB97DD /* Pods-ApplicationSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ApplicationSystem.release.xcconfig"; path = "Target Support Files/Pods-ApplicationSystem/Pods-ApplicationSystem.release.xcconfig"; sourceTree = "<group>"; };
 		F9675E7F579E2783C256A3A9 /* Pods_ApplicationSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ApplicationSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,11 +116,12 @@
 				A3A08DF324B2FC390021B239 /* RegisterView.swift */,
 				A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */,
 				A3179BA324AC7D210066FFAF /* ApplicationView.swift */,
-				A3ADB54F24B461A9004F5543 /* CompleteView.swift */,
 				A3A08DF124B2E87E0021B239 /* NewGameData.swift */,
-				A3ADB55324B473B2004F5543 /* CompleteGameData.swift */,
 				A3ADB55124B46E4B004F5543 /* GameData.swift */,
 				A3B6BDB224B1914500142D6C /* UserData.swift */,
+				A3C9ADD824B6111000D78F07 /* CompleteView.swift */,
+				A3C9ADD424B600EA00D78F07 /* InformationView.swift */,
+				A3C9ADD624B60F6500D78F07 /* InformationData.swift */,
 				A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */,
 				A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */,
 				A3753BEB24A473830068E8F7 /* Assets.xcassets */,
@@ -262,13 +265,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3A08DF424B2FC390021B239 /* RegisterView.swift in Sources */,
+				A3C9ADD924B6111000D78F07 /* CompleteView.swift in Sources */,
 				A3ADB55224B46E4B004F5543 /* GameData.swift in Sources */,
 				A3753BE624A473820068E8F7 /* AppDelegate.swift in Sources */,
 				A3A08DF224B2E87E0021B239 /* NewGameData.swift in Sources */,
+				A3C9ADD724B60F6500D78F07 /* InformationData.swift in Sources */,
 				A3753BE824A473820068E8F7 /* SceneDelegate.swift in Sources */,
 				A366CEB924A8829F00A9D1C3 /* UserSettingView.swift in Sources */,
-				A3ADB55424B473B2004F5543 /* CompleteGameData.swift in Sources */,
-				A3ADB55024B461A9004F5543 /* CompleteView.swift in Sources */,
+				A3C9ADD524B600EA00D78F07 /* InformationView.swift in Sources */,
 				A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */,
 				A3179BA424AC7D210066FFAF /* ApplicationView.swift in Sources */,
 				A3B6BDB324B1914500142D6C /* UserData.swift in Sources */,

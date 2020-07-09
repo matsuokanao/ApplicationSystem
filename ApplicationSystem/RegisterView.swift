@@ -21,7 +21,7 @@ struct RegisterView: View {
     @State var place = ""
     @State var gamevenue = ""
     @State var png = ""
-    
+    @State var selected = 0
     
     var body: some View {
         
@@ -34,7 +34,7 @@ struct RegisterView: View {
                     DatePicker(selection: $date, displayedComponents: [.date],
                         label:{ Text("試合日程を入力して下さい")})
                 }
-                Section(header: Text("都道府県")){
+                Section(header: Text("都道府県　(例.東京都　神奈川県　大阪府)")){
                     TextField("試合名を入力して下さい",text: $place)
                 }
                 Section(header: Text("試合会場")){
