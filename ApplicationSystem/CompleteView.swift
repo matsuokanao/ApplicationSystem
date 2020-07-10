@@ -9,6 +9,9 @@
 import SwiftUI
 
 struct CompleteView: View {
+        
+    @State var show = false
+    
     var body: some View {
         VStack(spacing:10){
             
@@ -18,7 +21,7 @@ struct CompleteView: View {
         .frame(width: 300.0 , height: 220.0)
             Spacer().frame(height: 15)
             
-        Text("エントリーが完了しました！")
+        Text("エントリーが完了しました!")
             .foregroundColor(.orange)
             .fontWeight(.heavy)
             .font(.headline)
@@ -28,8 +31,21 @@ struct CompleteView: View {
         Text("・入金が確認できない場合は自動キャンセルとなりますのでご注意下さい。")
         Text("・入金前の段階ではエントリー内容の変更、キャンセルが可能です。")
         Text("頑張って下さい！！！")
+        
+           Button(action: {
+            UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
+                    } ){
+              Text("HOME画面に移動する")
+              .foregroundColor(.white)
+              .padding(.vertical)
+              .frame(width: UIScreen.main.bounds.width - 50)
+                  }.background(Color("PinkRed"))
+            .cornerRadius(10)
+            .padding(.top, 25)
+
         }.frame(width: 300, height: 600)
-        .lineSpacing(10)
+        .lineSpacing(1)
+
     }
 }
 

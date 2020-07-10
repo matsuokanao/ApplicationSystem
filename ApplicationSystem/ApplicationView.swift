@@ -13,8 +13,7 @@ import WebKit
 
 struct ApplicationView: View {
     @ObservedObject var data = getGameData()
-    @ObservedObject var userdata = getUserData()
-    var body: some View {
+        var body: some View {
                 VStack{
             if self.data.datas.count != 0{
                 ScrollView(.vertical, showsIndicators: false){
@@ -26,7 +25,13 @@ struct ApplicationView: View {
                     }.padding()
                 }.background(Color("PinkRed"))
                 .edgesIgnoringSafeArea(.all)
-            }
+            }   else    {
+        Spacer()
+        Image("sorryview")
+            .resizable()
+            .frame(width: 300.0 , height: 180.0)
+
+        Spacer()
         }
     }
 }
@@ -42,7 +47,9 @@ struct CellViwe : View {
 
     @State var show = false
     var data : gamelist
+    
     var body : some View{
+        
         VStack{
                 WebView(loadUrl: self.data.png).frame(height: 400)
             HStack{
@@ -73,6 +80,8 @@ struct CellViwe : View {
         .sheet(isPresented: self.$show) {
           Spacer()
             ApplicationRecordView(data: self.data)
+                
+            }
         }
     }
 }
@@ -128,6 +137,8 @@ struct ApplicationRecordView : View {
                 Text(data.place)
                 Text("大会会場")
                 Text(data.gamevenue)
+                Text("大会日程")
+                Text(data.date)
                 }
                 Group{
                 Text("出場者名")
@@ -198,7 +209,7 @@ struct ApplicationRecordView : View {
                 
                 TextField("パスワードを入力して下さい", text: $pass)
                         .padding()
-                        .background(RoundedRectangle(cornerRadius: 4).stroke(self.idEmail != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+                        .background(RoundedRectangle(cornerRadius: 4).stroke(self.pass != "" ? Color("PinkRed") : self.color,lineWidth:  2))
             }
                 Text("エントリー画面をご確認下さい")
                     .foregroundColor(Color("PinkRed"))
@@ -208,7 +219,8 @@ struct ApplicationRecordView : View {
                     //試合申し込み完了テーブルに入れる
                     db.collection("complete")
                         .document(self.idEmail)
-                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail, "pass": self.pass]) { (err) in
+                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"data":self.data,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail, "pass": self.pass, "png": self.data.png])
+                        { (err) in
                             
             if err != nil{
                 print((err?.localizedDescription)!)

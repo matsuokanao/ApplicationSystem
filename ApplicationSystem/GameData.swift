@@ -16,6 +16,7 @@ var gamename: String
 var gamevenue: String
 var place: String
 var png: String
+var date : String
 }
 
 //読み込み
@@ -36,8 +37,10 @@ class getGameData : ObservableObject{
                 let gamevenue = i.get("gamevenue") as! String
                 let place = i.get("place") as! String
                 let png = i.get("png") as! String
+                let date = i.get("date") as! String
+
                 
-                self.datas.append(gamelist(id: id, gamename: gamename, gamevenue: gamevenue, place: place, png: png))
+                self.datas.append(gamelist(id: id, gamename: gamename, gamevenue: gamevenue, place: place, png: png,date: date))
             }
         }
     }
