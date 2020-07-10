@@ -70,7 +70,7 @@ struct CellInformationView :View {
                 .font(.title)
                 .fontWeight(.heavy)
                 .foregroundColor(Color("PinkRed"))
-            Text(informationdata.date).fontWeight(.heavy)
+            Text(informationdata.gamedate).fontWeight(.heavy)
                 .font(.body)
                 .foregroundColor(Color("PinkRed"))
                     }
@@ -111,7 +111,7 @@ var informationdata : complete
         Text(informationdata.completegamevenue)
             
         Text("開催日")
-        Text(informationdata.date)
+        Text(informationdata.gamedate)
             }
             Group{
         Text("エントリー種目")

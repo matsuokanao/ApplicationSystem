@@ -28,6 +28,8 @@ struct UserSettingView: View {
     @State var phonenumber = ""
     //メールアドレス
     @State var email = ""
+    //権限
+    @State var authority = "false"
     
     var body: some View {
         VStack{
@@ -80,7 +82,7 @@ struct UserSettingView: View {
                                         
                 //登録ボタンアクション
             Button(action: {
-                self.userList.addUser(firstname: self.firstname, lastname: self.lastname, sex: self.sex, belongTeam: self.belongTeam, belongPrefecture: self.belongPrefecture, registrationnumber: self.registrationnumber, representativeName: self.representativeName, address: self.address, phonenumber: self.phonenumber, email: self.email)
+                self.userList.addUser(firstname: self.firstname, lastname: self.lastname, sex: self.sex, belongTeam: self.belongTeam, belongPrefecture: self.belongPrefecture, registrationnumber: self.registrationnumber, representativeName: self.representativeName, address: self.address, phonenumber: self.phonenumber, email: self.email, authority: self.authority)
                     }){
                         Text("登録")
                             .foregroundColor(.white)

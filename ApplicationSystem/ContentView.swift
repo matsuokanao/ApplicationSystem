@@ -11,8 +11,11 @@ import Firebase
 
 
 struct ContentView: View {
+    @ObservedObject var data = getUserData()
     var body: some View {
-        Home()
+        ForEach(self.data.userdatas, id: \.id){i in
+            Home(userdata: i)
+        }
     }
 }
 
@@ -22,10 +25,10 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 struct Home : View{
-    
+
     @State var show = false
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
-    
+    var userdata : userlist
     var body: some View{
         
         NavigationView{
@@ -38,11 +41,15 @@ struct Home : View{
                     .tabItem{ Text("HOME")}
                 ApplicationView()
                     .tabItem{Text("試合に申し込む")}
-        //TODO 管理者のみボタンが見えるようにする
-                RegisterView()
-                    .tabItem{Text("試合を登録する")}
+
                 InformationView()
                     .tabItem{Text("エントリー")}
+                
+                if userdata.authority == "true"{
+                    RegisterView()
+                .tabItem{Text("試合を登録する")}
+                }
+
                 }
             } else {
                 ZStack{
@@ -412,4 +419,3 @@ struct  ErrorView : View {
         .background(Color.black.opacity(0.35).edgesIgnoringSafeArea(.all))
     }
 }
-

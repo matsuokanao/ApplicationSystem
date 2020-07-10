@@ -101,7 +101,7 @@ struct ApplicationRecordView : View {
     //メールアドレス(id)
     @State var idEmail = ""
     //名前
-    @State var name : String = ""
+    @State var name  = ""
     //性別
     @State var sex = ""
     //所属組織
@@ -118,11 +118,7 @@ struct ApplicationRecordView : View {
     @State var phonenumber = ""
     //パスワード
     @State var pass = ""
-    @State var isSecure = true
     
-    //アラート
-    @State var showingAlert = false
-
 
     var body : some View{
         VStack(alignment: .leading, spacing: 15){
@@ -219,7 +215,7 @@ struct ApplicationRecordView : View {
                     //試合申し込み完了テーブルに入れる
                     db.collection("complete")
                         .document(self.idEmail)
-                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"data":self.data,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail, "pass": self.pass, "png": self.data.png])
+                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"gamedate":self.data.date,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail, "pass": self.pass, "png": self.data.png])
                         { (err) in
                             
             if err != nil{
@@ -265,6 +261,7 @@ struct WebView: UIViewRepresentable {
         uiView.load(URLRequest(url: URL(string: loadUrl)!))
     }
 }
+
 
     
 

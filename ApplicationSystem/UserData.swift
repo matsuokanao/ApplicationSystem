@@ -28,6 +28,8 @@ struct userlist {
     var phonenumber : String
     //メールアドレス
     var email : String
+    //権限
+    var authority :String
 
 }
 
@@ -37,7 +39,7 @@ class UsersListViewModel: ObservableObject {
 
     var db = Firestore.firestore()
         //データの書き込み
-    func addUser(firstname:String, lastname:String, sex:String, belongTeam:String, belongPrefecture:String, registrationnumber:String, representativeName:String, address:String,phonenumber:String, email:String) {
+    func addUser(firstname:String, lastname:String, sex:String, belongTeam:String, belongPrefecture:String, registrationnumber:String, representativeName:String, address:String,phonenumber:String, email:String, authority:String) {
         let data : [String:Any] = [
             "firstname": firstname,
             "lastname": lastname,
@@ -48,7 +50,8 @@ class UsersListViewModel: ObservableObject {
             "representativeName": representativeName,
             "address": address,
             "phonenumber": phonenumber,
-            "email": email
+            "email": email,
+            "authority": authority
         ]
     db.collection("userlist").addDocument(data: data) { error in
         if let error = error {
@@ -83,8 +86,9 @@ class getUserData : ObservableObject{
                 let address = i.get("address") as! String
                 let phonenumber = i.get("phonenumber") as! String
                 let email = i.get("email") as! String
+                let authority = i.get("authority") as! String
                 
-                self.userdatas.append(userlist(id: id, firstname: firstname, lastname: lastname, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, email: email))
+                self.userdatas.append(userlist(id: id, firstname: firstname, lastname: lastname, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, email: email,authority:authority))
             }
         }
     }
