@@ -34,6 +34,8 @@ struct complete {
     var phonenumber : String
     //メールアドレス
     var idEmail : String
+    //パスワード
+    var pass : String
 }
 
 //読み込み
@@ -64,8 +66,9 @@ class getCompleteData : ObservableObject{
                 let address = i.get("address") as! String
                 let phonenumber = i.get("phonenumber") as! String
                 let idEmail = i.get("idEmail") as! String
+                let pass = i.get("pass") as! String
                 
-                self.datas.append(complete(id: id,name: name, completegamename: completegamename, completegamevenue: completegamevenue, completeplace: completeplace, event1: event1, event2: event2, event3: event3, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, idEmail: idEmail))
+                self.datas.append(complete(id: id,name: name, completegamename: completegamename, completegamevenue: completegamevenue, completeplace: completeplace, event1: event1, event2: event2, event3: event3, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, idEmail: idEmail, pass:pass))
             }
         }
     }

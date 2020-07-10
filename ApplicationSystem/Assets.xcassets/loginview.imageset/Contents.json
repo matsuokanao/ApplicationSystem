@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "11385D5E-A5AA-4856-893D-FEF21E6BF731_1_201_a.jpeg",
+      "filename" : "B6780EC1-261E-43EA-9DBF-D9F537528551_1_201_a.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -11,18 +11,6 @@
     },
     {
       "idiom" : "universal",
-      "scale" : "3x"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "iphone",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],

@@ -107,7 +107,12 @@ struct ApplicationRecordView : View {
     @State var address = ""
     //電話番号
     @State var phonenumber = ""
+    //パスワード
+    @State var pass = ""
+    @State var isSecure = true
     
+    //アラート
+    @State var showingAlert = false
 
 
     var body : some View{
@@ -186,17 +191,24 @@ struct ApplicationRecordView : View {
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 4).stroke(self.event3 != "" ? Color("PinkRed") : self.color,lineWidth:  2))
                 }
-                Text("最後にご確認のためご本人様のメールアドレスをご記入ください。　(必ず試合登録者と連絡の取れるメールアドレスを記入して下さい)")
+                Text("最後にご確認のためご本人様のメールアドレス,パスワードをご記入ください。　(必ず試合登録者と連絡の取れるメールアドレスを記入して下さい。エントリー中の試合を閲覧するのに必要となります。)")
                 TextField("連絡の取れるメールアドレスをご記入ください", text: $idEmail)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 4).stroke(self.event3 != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+                .background(RoundedRectangle(cornerRadius: 4).stroke(self.idEmail != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+                
+                TextField("パスワードを入力して下さい", text: $pass)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 4).stroke(self.idEmail != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+            }
+                Text("エントリー画面をご確認下さい")
+                    .foregroundColor(Color("PinkRed"))
                 Button(action: {
                     self.show.toggle()
                     let db = Firestore.firestore()
                     //試合申し込み完了テーブルに入れる
                     db.collection("complete")
                         .document(self.idEmail)
-                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail]) { (err) in
+                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail, "pass": self.pass]) { (err) in
                             
             if err != nil{
                 print((err?.localizedDescription)!)
@@ -205,7 +217,7 @@ struct ApplicationRecordView : View {
                    }
                     
                 }) {
-                    Text("内容確認")
+                    Text("エントリーする")
                         .padding(.vertical)
                         .frame(width: UIScreen.main.bounds.width - 30)
                         .sheet(isPresented: $show){
@@ -224,7 +236,7 @@ struct ApplicationRecordView : View {
             }
         }
     }
-}
+
 
 
 

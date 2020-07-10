@@ -240,7 +240,7 @@ struct SingUp : View {
                 GeometryReader{_ in
             
             VStack{
-                Image("signinview")
+                Image("loginview")
                     .resizable()
                     .frame(width: 300.0 , height: 180.0)
                 Text("アカウント登録")
