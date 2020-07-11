@@ -33,6 +33,8 @@ struct CompleteView: View {
         Text("頑張って下さい！！！")
         
            Button(action: {
+            
+            //HOME画面遷移
             UIApplication.shared.windows.first{ $0.isKeyWindow }?.rootViewController?.dismiss(animated: true, completion: nil)
                     } ){
               Text("HOME画面に移動する")

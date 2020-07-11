@@ -14,7 +14,7 @@ import FirebaseFirestore
 struct RegisterView: View {
     
     @ObservedObject var gameaList = ApplicationViewModel()
-    @State var showingAlert = false
+    @State var show = false
     @State var gamename = ""
     @State var date = ""
     @State var place = ""
@@ -25,6 +25,7 @@ struct RegisterView: View {
     var body: some View {
         
         NavigationView{
+            NavigationLink(destination: RegisterCompleteView()){
             Form{
                 Section(header: Text("試合名")){
                     TextField("試合名を入力して下さい",text: $gamename)
@@ -50,10 +51,10 @@ struct RegisterView: View {
     
                     }){
                         Text("確定")
+                        }
                     }
                 }
             }.navigationBarTitle("試合登録")
-            
         }
     }
 }
