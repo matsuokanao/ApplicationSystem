@@ -19,11 +19,20 @@ struct InformationView: View {
     
     var body: some View {
         VStack{
-            Spacer()
+            
+            Image("miniview")
+            .resizable()
+            .frame(width: 100.0 , height: 70.0)
             Text("試合登録時に入力したメールアドレスとパスワードを入力して下さい")
-                .foregroundColor(Color("PinkRed"))
+                
             .fontWeight(.heavy)
-                .font(.body)
+            .font(.body)
+            .padding(.vertical)
+            .frame(width: UIScreen.main.bounds.width - 40)
+            .background(Color.orange)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            
             TextField("メールアドレスを入力して下さい", text: $idmail)
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 4).stroke(self.idmail != "" ? Color("PinkRed") : self.color,lineWidth:  2))
@@ -38,7 +47,8 @@ struct InformationView: View {
                         
                 }
             }
-        }
+        }.frame(width: 300, height: 600)
+        .lineSpacing(1) 
     }
 }
 
@@ -69,11 +79,11 @@ struct CellInformationView :View {
                 Text(informationdata.completegamename)
                 .font(.title)
                 .fontWeight(.heavy)
-                .foregroundColor(Color("PinkRed"))
-            Text(informationdata.gamedate).fontWeight(.heavy)
+
+                Text(informationdata.gamedate).fontWeight(.heavy)
                 .font(.body)
-                .foregroundColor(Color("PinkRed"))
-                    }
+                
+                }
             Spacer()
         Button(action: {
             self.show.toggle()
@@ -94,6 +104,7 @@ struct CellInformationListView : View {
 @State var show = false
 @State var showingAlert = false
 var informationdata : complete
+@State var pay = "true"
     
     var body: some View {
         
@@ -211,6 +222,47 @@ var informationdata : complete
                 
                 Text(informationdata.belongTeam)
                     }
+            
+            
+                if informationdata.pay == "false"{
+                    
+                
+                Text("エントリー費用を申し込み済みの方は領収書の画像ファイルを指定のメールアドレスに送信し、「支払いが終了しました」ボタンをクリックして下さい！試合申込みが完了となります！")
+                    .fontWeight(.heavy)
+                    .font(.body)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 40)
+                    .background(Color.orange)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+
+                
+                    Button(action: {
+                        self.show.toggle()
+                        let db = Firestore.firestore()
+                        //試合申し込み完了テーブルに入れる
+                        db.collection("complete")
+                            .document(self.informationdata.idEmail)
+                            .updateData(["pay": self.pay])
+                    { (err) in
+                                
+            if err != nil{
+                    print((err?.localizedDescription)!)
+                       return
+                        }
+                    }
+            }) {
+        Text("支払いが終了しました。")
+            .padding(.vertical)
+            .frame(width: UIScreen.main.bounds.width - 30)
+            .sheet(isPresented: $show){
+                CompleteView()
+        }
+    }.background(Color.red)
+    .foregroundColor(.white)
+    .cornerRadius(10)
+
+
             Button("エントリーを取り消す"){
                 self.showingAlert = true
 
@@ -235,10 +287,13 @@ var informationdata : complete
                       }),
                     secondaryButton: .cancel(Text("いいえ")))
                     }.sheet(isPresented: $show){
-                            EntryCancellationView()
+                            EntryView()
+                        }
+                    }else{
+                    Text("試合費用の申込みが確認できました。")
                     }
                 }
             }
-        }
+        }.frame(width: 300, height: 600)
     }
 }

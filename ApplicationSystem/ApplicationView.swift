@@ -47,7 +47,7 @@ struct CellViwe : View {
 
     @State var show = false
     var data : gamelist
-    
+        
     var body : some View{
         
         VStack{
@@ -118,6 +118,8 @@ struct ApplicationRecordView : View {
     @State var phonenumber = ""
     //パスワード
     @State var pass = ""
+    //試合費用支払い状況
+    @State var pay = "false"
     
 
     var body : some View{
@@ -219,7 +221,7 @@ struct ApplicationRecordView : View {
                     //試合申し込み完了テーブルに入れる
                     db.collection("complete")
                         .document(self.idEmail)
-                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"gamedate":self.data.date,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail, "pass": self.pass, "png": self.data.png])
+                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"gamedate":self.data.date,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail, "pass": self.pass, "png": self.data.png, "pay": self.pay])
                         { (err) in
                             
             if err != nil{

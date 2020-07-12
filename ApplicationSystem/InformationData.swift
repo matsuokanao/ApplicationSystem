@@ -40,6 +40,8 @@ struct complete {
     var  gamedate :String
     //要項
     var  png :String
+    //試合費用支払い状況
+    var pay : String
     
 }
 
@@ -74,8 +76,9 @@ class getCompleteData : ObservableObject{
                 let pass = i.get("pass") as! String
                 let gamedate = i.get("gamedate") as! String
                 let png = i.get("png") as! String
+                let pay = i.get("pay") as! String
                 
-                self.datas.append(complete(id: id,name: name, completegamename: completegamename, completegamevenue: completegamevenue, completeplace: completeplace, event1: event1, event2: event2, event3: event3, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, idEmail: idEmail, pass:pass, gamedate: gamedate, png: png))
+                self.datas.append(complete(id: id,name: name, completegamename: completegamename, completegamevenue: completegamevenue, completeplace: completeplace, event1: event1, event2: event2, event3: event3, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, idEmail: idEmail, pass:pass, gamedate: gamedate, png: png,pay: pay))
             }
         }
     }

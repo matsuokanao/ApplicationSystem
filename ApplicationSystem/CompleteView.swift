@@ -16,22 +16,22 @@ struct CompleteView: View {
         VStack(spacing:10){
             
 
-        Image("entryview")
+        Image("completeview")
         .resizable()
         .frame(width: 300.0 , height: 220.0)
             Spacer().frame(height: 15)
             
-        Text("エントリーが完了しました!")
+        Text("エントリーを申し込みました!エントリー費用をお支払いください！")
             .foregroundColor(.orange)
             .fontWeight(.heavy)
             .font(.headline)
 
 
         Text("・エントリータブにてエントリー内容をご確認し、入金期限までに入金をお済ませ下さい。")
+        Text("・入金が完了次第エントリー完了となります。")
         Text("・入金が確認できない場合は自動キャンセルとなりますのでご注意下さい。")
         Text("・入金前の段階ではエントリー内容の変更、キャンセルが可能です。")
-        Text("頑張って下さい！！！")
-        
+                
            Button(action: {
             
             //HOME画面遷移
