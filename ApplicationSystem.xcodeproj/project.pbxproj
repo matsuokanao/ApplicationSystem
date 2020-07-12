@@ -11,9 +11,9 @@
 		A316D63E24AB1402009D4990 /* Homescreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A316D63D24AB1402009D4990 /* Homescreen.swift */; };
 		A3179B9624AC27D00066FFAF /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A3179B9524AC27D00066FFAF /* SDWebImageSwiftUI */; };
 		A3179BA424AC7D210066FFAF /* ApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3179BA324AC7D210066FFAF /* ApplicationView.swift */; };
-		A366CEB924A8829F00A9D1C3 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */; };
 		A374B52D24BAC013002D90E3 /* EntryCancellationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374B52C24BAC013002D90E3 /* EntryCancellationView.swift */; };
 		A374B53124BAE8AE002D90E3 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374B53024BAE8AE002D90E3 /* EntryView.swift */; };
+		A374B53D24BB1011002D90E3 /* RegisterPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374B53C24BB1011002D90E3 /* RegisterPassView.swift */; };
 		A3753BE624A473820068E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE524A473820068E8F7 /* AppDelegate.swift */; };
 		A3753BE824A473820068E8F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE724A473820068E8F7 /* SceneDelegate.swift */; };
 		A3753BEA24A473820068E8F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE924A473820068E8F7 /* ContentView.swift */; };
@@ -25,7 +25,6 @@
 		A3A08DF424B2FC390021B239 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A08DF324B2FC390021B239 /* RegisterView.swift */; };
 		A3ADB55224B46E4B004F5543 /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ADB55124B46E4B004F5543 /* GameData.swift */; };
 		A3AFBABB24B9B25A00C423FC /* RegisterCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AFBABA24B9B25A00C423FC /* RegisterCompleteView.swift */; };
-		A3B6BDB324B1914500142D6C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B6BDB224B1914500142D6C /* UserData.swift */; };
 		A3C4BC7124A582A10094BAD6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */; };
 		A3C9ADD524B600EA00D78F07 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9ADD424B600EA00D78F07 /* InformationView.swift */; };
 		A3C9ADD724B60F6500D78F07 /* InformationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C9ADD624B60F6500D78F07 /* InformationData.swift */; };
@@ -38,9 +37,9 @@
 		A316D63B24AAF851009D4990 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		A316D63D24AB1402009D4990 /* Homescreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homescreen.swift; sourceTree = "<group>"; };
 		A3179BA324AC7D210066FFAF /* ApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationView.swift; sourceTree = "<group>"; };
-		A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
 		A374B52C24BAC013002D90E3 /* EntryCancellationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCancellationView.swift; sourceTree = "<group>"; };
 		A374B53024BAE8AE002D90E3 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		A374B53C24BB1011002D90E3 /* RegisterPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPassView.swift; sourceTree = "<group>"; };
 		A3753BE224A473820068E8F7 /* ApplicationSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplicationSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3753BE524A473820068E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3753BE724A473820068E8F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +53,6 @@
 		A3A08DF324B2FC390021B239 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		A3ADB55124B46E4B004F5543 /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		A3AFBABA24B9B25A00C423FC /* RegisterCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCompleteView.swift; sourceTree = "<group>"; };
-		A3B6BDB224B1914500142D6C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3C9ADD424B600EA00D78F07 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		A3C9ADD624B60F6500D78F07 /* InformationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationData.swift; sourceTree = "<group>"; };
@@ -119,18 +117,17 @@
 				A3753BE724A473820068E8F7 /* SceneDelegate.swift */,
 				A3753BE924A473820068E8F7 /* ContentView.swift */,
 				A316D63D24AB1402009D4990 /* Homescreen.swift */,
-				A3A08DF324B2FC390021B239 /* RegisterView.swift */,
 				A3AFBABA24B9B25A00C423FC /* RegisterCompleteView.swift */,
-				A366CEB824A8829F00A9D1C3 /* UserSettingView.swift */,
+				A374B53C24BB1011002D90E3 /* RegisterPassView.swift */,
 				A3A08DF124B2E87E0021B239 /* NewGameData.swift */,
 				A3ADB55124B46E4B004F5543 /* GameData.swift */,
-				A3B6BDB224B1914500142D6C /* UserData.swift */,
 				A3C9ADD824B6111000D78F07 /* CompleteView.swift */,
 				A3C9ADD624B60F6500D78F07 /* InformationData.swift */,
-				A3179BA324AC7D210066FFAF /* ApplicationView.swift */,
 				A374B53024BAE8AE002D90E3 /* EntryView.swift */,
 				A374B52C24BAC013002D90E3 /* EntryCancellationView.swift */,
 				A3C9ADD424B600EA00D78F07 /* InformationView.swift */,
+				A3179BA324AC7D210066FFAF /* ApplicationView.swift */,
+				A3A08DF324B2FC390021B239 /* RegisterView.swift */,
 				A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */,
 				A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */,
 				A3753BEB24A473830068E8F7 /* Assets.xcassets */,
@@ -281,12 +278,11 @@
 				A3753BE624A473820068E8F7 /* AppDelegate.swift in Sources */,
 				A3A08DF224B2E87E0021B239 /* NewGameData.swift in Sources */,
 				A3C9ADD724B60F6500D78F07 /* InformationData.swift in Sources */,
+				A374B53D24BB1011002D90E3 /* RegisterPassView.swift in Sources */,
 				A3753BE824A473820068E8F7 /* SceneDelegate.swift in Sources */,
-				A366CEB924A8829F00A9D1C3 /* UserSettingView.swift in Sources */,
 				A3C9ADD524B600EA00D78F07 /* InformationView.swift in Sources */,
 				A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */,
 				A3179BA424AC7D210066FFAF /* ApplicationView.swift in Sources */,
-				A3B6BDB324B1914500142D6C /* UserData.swift in Sources */,
 				A3753BEA24A473820068E8F7 /* ContentView.swift in Sources */,
 				A374B53124BAE8AE002D90E3 /* EntryView.swift in Sources */,
 				A316D63E24AB1402009D4990 /* Homescreen.swift in Sources */,

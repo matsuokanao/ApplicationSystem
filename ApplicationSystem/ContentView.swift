@@ -5,17 +5,14 @@
 //  Created by 松岡奈央 on 2020/06/25.
 //  Copyright © 2020 松岡奈央. All rights reserved.
 //
-
 import SwiftUI
 import Firebase
 
 
 struct ContentView: View {
-    @ObservedObject var data = getUserData()
+
     var body: some View {
-        ForEach(self.data.userdatas, id: \.id){i in
-            Home(userdata: i)
-        }
+            Home()
     }
 }
 
@@ -28,7 +25,6 @@ struct Home : View{
 
     @State var show = false
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
-    var userdata : userlist
     var body: some View{
         
         NavigationView{
@@ -45,10 +41,10 @@ struct Home : View{
                 InformationView()
                     .tabItem{Text("エントリー")}
                 
-                if userdata.authority == "true"{
-                    RegisterView()
+                
+                    RegisterPassView()
                 .tabItem{Text("試合を登録する")}
-                }
+                
 
                 }
             } else {

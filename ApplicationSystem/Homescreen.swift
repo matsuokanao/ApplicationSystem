@@ -34,19 +34,6 @@ struct Homescreen: View {
                     .cornerRadius(10)
                     .padding(.top, 25)
                     
-                    Button(action: {self.showingDetail.toggle()} ){
-                       Text("個人情報を登録する")
-                       .foregroundColor(.white)
-                       .padding(.vertical)
-                       .frame(width: UIScreen.main.bounds.width - 50)
-                           }.sheet(isPresented: $showingDetail){
-                    UserSettingView()
-
-                 
-                    }
-                    .background(Color("PinkRed"))
-                    .cornerRadius(10)
-                    .padding(.top, 25)
 
                 }
             }

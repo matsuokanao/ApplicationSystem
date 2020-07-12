@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct UserSettingView: View {
-    @ObservedObject var userList = UsersListViewModel()
+    @ObservedObject var data = getUserData()
         
+    var body: some View {
+        VStack{
+            ForEach(self.data.userdatas,id: \.id){i in
+                UserEditView(userdata: i)
+            }
+        }.padding()
+    }
+}
+            
+
+    struct UserSettingView_Previews: PreviewProvider {
+        static var previews: some View {
+            UserSettingView()
+        }
+    }
+
+struct UserEditView : View {
+    @ObservedObject var userList = UsersListViewModel()
+    var userdata : userlist
     @State var color = Color.black.opacity(0.7)
     @State var firstname : String = ""
     @State var lastname :String = ""
@@ -41,7 +60,7 @@ struct UserSettingView: View {
             Text("名前")
                 .foregroundColor(self.color)
                 .padding(.top, 30)
-                
+
             TextField("名字", text: $firstname)
                 .padding()
                 .background(RoundedRectangle(cornerRadius: 4).stroke(self.firstname != "" ? Color("PinkRed") : self.color,lineWidth:  2))
@@ -98,10 +117,4 @@ struct UserSettingView: View {
         }
     }
 }
-            
 
-    struct UserSettingView_Previews: PreviewProvider {
-        static var previews: some View {
-            UserSettingView()
-        }
-    }

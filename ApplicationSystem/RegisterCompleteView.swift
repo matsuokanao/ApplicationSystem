@@ -5,7 +5,6 @@
 //  Created by 松岡奈央 on 2020/07/11.
 //  Copyright © 2020 松岡奈央. All rights reserved.
 //
-
 import SwiftUI
 
 struct RegisterCompleteView: View {
@@ -50,4 +49,3 @@ struct RegisterCompleteView_Previews: PreviewProvider {
         RegisterCompleteView()
     }
 }
-
