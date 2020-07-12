@@ -14,6 +14,8 @@
 		A374B52D24BAC013002D90E3 /* EntryCancellationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374B52C24BAC013002D90E3 /* EntryCancellationView.swift */; };
 		A374B53124BAE8AE002D90E3 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374B53024BAE8AE002D90E3 /* EntryView.swift */; };
 		A374B53D24BB1011002D90E3 /* RegisterPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374B53C24BB1011002D90E3 /* RegisterPassView.swift */; };
+		A374B53F24BB2C2E002D90E3 /* RegisterHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374B53E24BB2C2E002D90E3 /* RegisterHomeView.swift */; };
+		A374B54124BB2D96002D90E3 /* RegisterEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A374B54024BB2D96002D90E3 /* RegisterEntryView.swift */; };
 		A3753BE624A473820068E8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE524A473820068E8F7 /* AppDelegate.swift */; };
 		A3753BE824A473820068E8F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE724A473820068E8F7 /* SceneDelegate.swift */; };
 		A3753BEA24A473820068E8F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3753BE924A473820068E8F7 /* ContentView.swift */; };
@@ -40,6 +42,8 @@
 		A374B52C24BAC013002D90E3 /* EntryCancellationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryCancellationView.swift; sourceTree = "<group>"; };
 		A374B53024BAE8AE002D90E3 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
 		A374B53C24BB1011002D90E3 /* RegisterPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPassView.swift; sourceTree = "<group>"; };
+		A374B53E24BB2C2E002D90E3 /* RegisterHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterHomeView.swift; sourceTree = "<group>"; };
+		A374B54024BB2D96002D90E3 /* RegisterEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterEntryView.swift; sourceTree = "<group>"; };
 		A3753BE224A473820068E8F7 /* ApplicationSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ApplicationSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3753BE524A473820068E8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3753BE724A473820068E8F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,8 +121,6 @@
 				A3753BE724A473820068E8F7 /* SceneDelegate.swift */,
 				A3753BE924A473820068E8F7 /* ContentView.swift */,
 				A316D63D24AB1402009D4990 /* Homescreen.swift */,
-				A3AFBABA24B9B25A00C423FC /* RegisterCompleteView.swift */,
-				A374B53C24BB1011002D90E3 /* RegisterPassView.swift */,
 				A3A08DF124B2E87E0021B239 /* NewGameData.swift */,
 				A3ADB55124B46E4B004F5543 /* GameData.swift */,
 				A3C9ADD824B6111000D78F07 /* CompleteView.swift */,
@@ -127,6 +129,10 @@
 				A374B52C24BAC013002D90E3 /* EntryCancellationView.swift */,
 				A3C9ADD424B600EA00D78F07 /* InformationView.swift */,
 				A3179BA324AC7D210066FFAF /* ApplicationView.swift */,
+				A374B53C24BB1011002D90E3 /* RegisterPassView.swift */,
+				A374B53E24BB2C2E002D90E3 /* RegisterHomeView.swift */,
+				A374B54024BB2D96002D90E3 /* RegisterEntryView.swift */,
+				A3AFBABA24B9B25A00C423FC /* RegisterCompleteView.swift */,
 				A3A08DF324B2FC390021B239 /* RegisterView.swift */,
 				A3D2347E24A97CB400A42665 /* ApplicatioSystem.xcdatamodeld */,
 				A3C4BC7024A582A10094BAD6 /* GoogleService-Info.plist */,
@@ -278,9 +284,11 @@
 				A3753BE624A473820068E8F7 /* AppDelegate.swift in Sources */,
 				A3A08DF224B2E87E0021B239 /* NewGameData.swift in Sources */,
 				A3C9ADD724B60F6500D78F07 /* InformationData.swift in Sources */,
+				A374B54124BB2D96002D90E3 /* RegisterEntryView.swift in Sources */,
 				A374B53D24BB1011002D90E3 /* RegisterPassView.swift in Sources */,
 				A3753BE824A473820068E8F7 /* SceneDelegate.swift in Sources */,
 				A3C9ADD524B600EA00D78F07 /* InformationView.swift in Sources */,
+				A374B53F24BB2C2E002D90E3 /* RegisterHomeView.swift in Sources */,
 				A3D2348024A97CB400A42665 /* ApplicatioSystem.xcdatamodeld in Sources */,
 				A3179BA424AC7D210066FFAF /* ApplicationView.swift in Sources */,
 				A3753BEA24A473820068E8F7 /* ContentView.swift in Sources */,

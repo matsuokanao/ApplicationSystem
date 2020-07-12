@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RegisterCompleteView: View {
-    @State var show = false
+    
     
     var body: some View {
         VStack(spacing:10){

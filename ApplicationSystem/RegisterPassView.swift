@@ -43,11 +43,11 @@ struct RegisterPassView: View {
             self.show.toggle()
                 } ){
 
-            Text("試合を登録する")
+            Text("運営関係者ページに移動する")
                 .padding(.vertical)
                 .frame(width: UIScreen.main.bounds.width - 30)
                 .sheet(isPresented: $show){
-                RegisterView()
+                RegisterHomeView()
                     }
                 }.background(Color("PinkRed"))
                 .cornerRadius(10)

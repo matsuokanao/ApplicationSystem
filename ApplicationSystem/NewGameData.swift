@@ -15,13 +15,18 @@ class ApplicationViewModel: ObservableObject {
     
     var db = Firestore.firestore()
     //データの書き込み
-    func addGame( gamename: String , gamevenue: String,place: String,png: String,date: String) {
+    func addGame( gamename: String , gamevenue: String,place: String,png: String,date: String, link: String, sponsor :String, gamepass:String,email: String) {
         let data = [
             "gamename": gamename,
             "gamevenue": gamevenue,
             "place": place,
             "png": png,
-            "date": date
+            "date": date,
+            "link" :link,
+            "sponsor": sponsor,
+            "gamepass": gamepass,
+            "email": email
+            
             ]
         db.collection("gamelist").addDocument(data: data) { error in
             if let error = error {

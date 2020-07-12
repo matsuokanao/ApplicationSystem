@@ -11,6 +11,7 @@ import Firebase
 import FirebaseFirestore
 
 
+
 struct RegisterView: View {
     
     @ObservedObject var gameaList = ApplicationViewModel()
@@ -19,11 +20,17 @@ struct RegisterView: View {
     @State var place = ""
     @State var gamevenue = ""
     @State var png = ""
+    @State var link = ""
+    @State var sponsor = ""
+    @State var gamepass = ""
+    @State var email = ""
     @State var show = false
     @State var color = Color.black.opacity(0.7)
     
     var body: some View {
         VStack{
+            ScrollView(.vertical){
+
             Group{
         Text("試合名")
         TextField("試合名を入力して下さい",text: $gamename)
@@ -50,11 +57,35 @@ struct RegisterView: View {
             .padding()
             .background(RoundedRectangle(cornerRadius: 4).stroke(self.png != "" ? Color("PinkRed") : self.color,lineWidth:  2))
             }
+            
+    Group{
+        Text("大会ホームページのURLリンク")
+        TextField("大会ホームページのURLリンクをお貼り下さい",text: $link)
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 4).stroke(self.link != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+        
+        Text("大会主催団体名")
+        TextField("大会主催団体名を入力して下さい",text: $sponsor)
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 4).stroke(self.sponsor != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+        
+        Text("パスワード")
+        TextField("パスワードを入力して下さい",text: $gamepass)
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 4).stroke(self.gamepass != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+        
+        Text("連絡先メールアドレス")
+        TextField("連絡先メールアドレスを入力して下さい",text: $email)
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 4).stroke(self.email != "" ? Color("PinkRed") : self.color,lineWidth:  2))
+
+
+            }
 
                     Button(action: {
                         self.show.toggle()
                                 //試合申し込み完了テーブルに入れる
-                           self.gameaList.addGame(gamename: self.gamename, gamevenue: self.gamevenue, place: self.place, png: self.png, date: self.date)
+                        self.gameaList.addGame(gamename: self.gamename, gamevenue: self.gamevenue, place: self.place, png: self.png, date: self.date,link: self.link,sponsor: self.sponsor,gamepass: self.gamepass,email: self.email)
 
                             }){
                         Text("確定")
@@ -66,11 +97,10 @@ struct RegisterView: View {
             }.background(Color.orange)
             .foregroundColor(.white)
             .cornerRadius(10)
-
-            }.frame(width: 300, height: 600)
-            
-        }
+            }
+        }.frame(width: 300, height: 600)
     }
+}
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {

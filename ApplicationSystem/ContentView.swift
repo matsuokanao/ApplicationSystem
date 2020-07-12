@@ -43,7 +43,7 @@ struct Home : View{
                 
                 
                     RegisterPassView()
-                .tabItem{Text("試合を登録する")}
+                .tabItem{Text("大会関係者ページ")}
                 
 
                 }
