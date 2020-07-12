@@ -91,7 +91,8 @@ struct CellInformationView :View {
     }
 }
 struct CellInformationListView : View {
-    
+@State var show = false
+@State var showingAlert = false
 var informationdata : complete
     
     var body: some View {
@@ -102,40 +103,139 @@ var informationdata : complete
         VStack{
         Group{
         Text("大会名")
+            .foregroundColor(.white)
+            .padding(.vertical)
+            .frame(width: UIScreen.main.bounds.width - 200,height: 30)
+            .background(Color("PinkRed"))
+            .cornerRadius(10)
+            .padding(.top, 10)
+            .lineSpacing(1)
+
         Text(informationdata.completegamename)
-         
+      
+            
         Text("開催地")
+            .foregroundColor(.white)
+            .padding(.vertical)
+            .frame(width: UIScreen.main.bounds.width - 200,height: 30)
+            .background(Color("PinkRed"))
+            .cornerRadius(10)
+            .padding(.top, 10)
+            .lineSpacing(1)
+            
         Text(informationdata.completeplace)
             
         Text("スタジアム")
+            .foregroundColor(.white)
+            .padding(.vertical)
+            .frame(width: UIScreen.main.bounds.width - 200,height: 30)
+            .background(Color("PinkRed"))
+            .cornerRadius(10)
+            .padding(.top, 10)
+            .lineSpacing(1)
+            
         Text(informationdata.completegamevenue)
             
         Text("開催日")
+            .foregroundColor(.white)
+            .padding(.vertical)
+            .frame(width: UIScreen.main.bounds.width - 200,height: 30)
+            .background(Color("PinkRed"))
+            .cornerRadius(10)
+            .padding(.top, 10)
+            .lineSpacing(1)
+            
         Text(informationdata.gamedate)
             }
             Group{
         Text("エントリー種目")
-            if informationdata.event1 == "なし" {
+                .foregroundColor(.white)
+                .padding(.vertical)
+                .frame(width: UIScreen.main.bounds.width - 200,height: 30)
+                .background(Color("PinkRed"))
+                .cornerRadius(10)
+                .padding(.top, 10)
+                .lineSpacing(1)
+                
+            if informationdata.event1 != "なし" {
                 Text(informationdata.event1)
                     } else {
             Text("")
             }
             
         Text("エントリー種目")
-            if informationdata.event2 == "なし" {
+                .foregroundColor(.white)
+                .padding(.vertical)
+                .frame(width: UIScreen.main.bounds.width - 200,height: 30)
+                .background(Color("PinkRed"))
+                .cornerRadius(10)
+                .padding(.top, 10)
+                .lineSpacing(1)
+                
+            if informationdata.event2 != "なし" {
                 Text(informationdata.event2)
             } else {
                 }
         Text("エントリー種目")
-            if informationdata.event3 == "なし" {
+                .foregroundColor(.white)
+                .padding(.vertical)
+                .frame(width: UIScreen.main.bounds.width - 200,height: 30)
+                .background(Color("PinkRed"))
+                .cornerRadius(10)
+                .padding(.top, 10)
+                .lineSpacing(1)
+                
+            if informationdata.event3 != "なし" {
                 Text(informationdata.event3)
             } else {
                 }
             Text("登録陸協")
+                .foregroundColor(.white)
+                .padding(.vertical)
+                .frame(width: UIScreen.main.bounds.width - 200,height: 30)
+                .background(Color("PinkRed"))
+                .cornerRadius(10)
+                .padding(.top, 10)
+                .lineSpacing(1)
+                
                 Text(informationdata.belongPrefecture)
                 
             Text("登録チーム")
+                .foregroundColor(.white)
+                .padding(.vertical)
+                .frame(width: UIScreen.main.bounds.width - 200,height: 30)
+                .background(Color("PinkRed"))
+                .cornerRadius(10)
+                .padding(.top, 10)
+                .lineSpacing(1)
+                
                 Text(informationdata.belongTeam)
+                    }
+            Button("エントリーを取り消す"){
+                self.showingAlert = true
+
+            }.alert(isPresented: $showingAlert){
+                Alert(title: Text("注意"),
+                      message: Text("エントリーを取り消します。よろしいですか？"),
+                      primaryButton: .destructive(Text("エントリーを取り消す"),
+                    action: {
+                    self.show.toggle()
+                    let db = Firestore.firestore()
+                    //エントリー削除
+                    db.collection("complete")
+                        .document(self.informationdata.idEmail)
+                        .delete()
+                    { (err) in
+                            
+            if err != nil{
+                print((err?.localizedDescription)!)
+                   return
+                            }
+                        }
+                      }),
+                    secondaryButton: .cancel(Text("いいえ")))
+                    }.sheet(isPresented: $show){
+                            EntryCancellationView()
                     }
                 }
             }

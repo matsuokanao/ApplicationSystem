@@ -209,6 +209,10 @@ struct ApplicationRecordView : View {
             }
                 Text("エントリー画面をご確認下さい")
                     .foregroundColor(Color("PinkRed"))
+                
+                if self.name == ""{
+                    Text("名前を入力して下さい")
+                }else{
                 Button(action: {
                     self.show.toggle()
                     let db = Firestore.firestore()
@@ -230,14 +234,12 @@ struct ApplicationRecordView : View {
                         .frame(width: UIScreen.main.bounds.width - 30)
                         .sheet(isPresented: $show){
                             CompleteView()
-
-                    
                     }
                     
                 }.background(Color.orange)
                 .foregroundColor(.white)
                 .cornerRadius(2)
-                
+                }
             }.padding()
             
             Spacer()
