@@ -90,7 +90,154 @@ var body: some View {
                     .foregroundColor(Color("PinkRed"))
                     .padding(14)
                     }.sheet(isPresented: self.$show) {
-Text("")
+                        CellEditView(editdata: self.editdata, data: self.data, passdata: self.passdata)
+                }
+            }
+        }
+    }
+}
+
+struct CellEditView: View {
+    
+    @State var color = Color.black.opacity(0.7)
+    var  editdata : gamelist
+    var data :String
+    var passdata : String
+    @State var gamenameshow = false
+    @State var dateshow = false
+    @State var placeshow = false
+    @State var gamevenueshow = false
+    @State var linkshow = false
+    @State var sponsorshow = false
+    @State var gamepassshow = false
+    @State var emailshow = false
+    @State var pngshow = false
+
+    var body: some View {
+
+    
+VStack{
+        ScrollView(.vertical){
+
+    Group{
+    Text("試合名")
+        HStack{
+            Text(editdata.gamename)
+            Button(action: {
+                self.gamenameshow.toggle()
+            }){
+                Text("編集")
+                .sheet(isPresented: $gamenameshow){
+                    EditGamenameData(editdata: self.editdata)
+                }
+            }
+        }
+        
+    Text("試合日程")
+        HStack{
+            Text(editdata.date)
+            Button(action: {
+                self.dateshow.toggle()
+            }){
+                Text("編集")
+                .sheet(isPresented: $dateshow){
+                EditDateData(editdata: self.editdata)
+                }
+            }
+        }
+    Text("開催都道府県")
+        HStack{
+            Text(editdata.place)
+            Button(action: {
+                self.placeshow.toggle()
+            }){
+                Text("編集")
+                .sheet(isPresented: $placeshow){
+                EditPlaceData(editdata: self.editdata)
+                }
+            }
+        }
+
+    Text("試合会場")
+        HStack{
+            Text(editdata.gamevenue)
+            Button(action: {
+                self.gamevenueshow.toggle()
+            }){
+                Text("編集")
+                .sheet(isPresented: $gamevenueshow){
+                EditGamevenueData(editdata: self.editdata)
+                }
+            }
+        }
+    }
+        
+Group{
+    Text("大会ホームページのURLリンク")
+        HStack{
+            Text(editdata.link)
+            Button(action: {
+                self.linkshow.toggle()
+            }){
+                Text("編集")
+                .sheet(isPresented: $linkshow){
+                EditLinkData(editdata: self.editdata)
+                }
+            }
+        }
+    
+    Text("大会主催団体名")
+        HStack{
+            Text(editdata.sponsor)
+            Button(action: {
+                self.sponsorshow.toggle()
+            }){
+                Text("編集")
+                .sheet(isPresented: $sponsorshow){
+                EditSponsorData(editdata: self.editdata)
+                }
+            }
+        }
+        
+    Text("運営団体のパスワード")
+        HStack{
+            Text(editdata.gamepass)
+            Button(action: {
+                self.gamepassshow.toggle()
+            }){
+                Text("編集")
+                .sheet(isPresented: $gamepassshow){
+                EditgamePassData(editdata: self.editdata)
+                }
+            }
+        }
+    
+    Text("運営団体連絡先メールアドレス")
+        HStack{
+            Text(editdata.email)
+            Button(action: {
+                self.emailshow.toggle()
+            }){
+                Text("編集")
+                .sheet(isPresented: $emailshow){
+                EditEmailData(editdata: self.editdata)
+                }
+            }
+        }
+    
+    Text("PDFファイル")
+        HStack{
+            Text(editdata.png)
+            Button(action: {
+                self.pngshow.toggle()
+            }){
+                Text("編集")
+                .sheet(isPresented: $pngshow){
+                EditPngData(editdata: self.editdata)
+                }
+            }
+        }
+    
                 }
             }
         }
