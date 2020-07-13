@@ -53,7 +53,7 @@ struct RegisterView: View {
             .background(RoundedRectangle(cornerRadius: 4).stroke(self.gamevenue != "" ? Color("PinkRed") : self.color,lineWidth:  2))
 
         Text("試合要項（PDFファイルを貼って下さい）")
-        TextField("試合要項画像のURLをお貼り下さい",text: $png)
+        TextField("試合要項画像のPDFをお貼り下さい",text: $png)
             .padding()
             .background(RoundedRectangle(cornerRadius: 4).stroke(self.png != "" ? Color("PinkRed") : self.color,lineWidth:  2))
             }
@@ -69,12 +69,12 @@ struct RegisterView: View {
             .padding()
             .background(RoundedRectangle(cornerRadius: 4).stroke(self.sponsor != "" ? Color("PinkRed") : self.color,lineWidth:  2))
         
-        Text("パスワード")
+        Text("運営団体のパスワード")
         TextField("パスワードを入力して下さい",text: $gamepass)
             .padding()
             .background(RoundedRectangle(cornerRadius: 4).stroke(self.gamepass != "" ? Color("PinkRed") : self.color,lineWidth:  2))
         
-        Text("連絡先メールアドレス")
+        Text("運営団体連絡先メールアドレス")
         TextField("連絡先メールアドレスを入力して下さい",text: $email)
             .padding()
             .background(RoundedRectangle(cornerRadius: 4).stroke(self.email != "" ? Color("PinkRed") : self.color,lineWidth:  2))

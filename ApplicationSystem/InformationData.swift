@@ -42,7 +42,10 @@ struct complete {
     var  png :String
     //試合費用支払い状況
     var pay : String
-    
+    //主催者側のemail
+    var gameemail : String
+    //主催者側のpass
+    var gamepass : String
 }
 
 //読み込み
@@ -77,8 +80,11 @@ class getCompleteData : ObservableObject{
                 let gamedate = i.get("gamedate") as! String
                 let png = i.get("png") as! String
                 let pay = i.get("pay") as! String
+                let gameemail = i.get("gameemail") as! String
+                let gamepass = i.get("gamepass") as! String
+
                 
-                self.datas.append(complete(id: id,name: name, completegamename: completegamename, completegamevenue: completegamevenue, completeplace: completeplace, event1: event1, event2: event2, event3: event3, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, idEmail: idEmail, pass:pass, gamedate: gamedate, png: png,pay: pay))
+                self.datas.append(complete(id: id,name: name, completegamename: completegamename, completegamevenue: completegamevenue, completeplace: completeplace, event1: event1, event2: event2, event3: event3, sex: sex, belongTeam: belongTeam, belongPrefecture: belongPrefecture, registrationnumber: registrationnumber, representativeName: representativeName, address: address, phonenumber: phonenumber, idEmail: idEmail, pass:pass, gamedate: gamedate, png: png,pay: pay,gameemail: gameemail, gamepass: gamepass))
             }
         }
     }

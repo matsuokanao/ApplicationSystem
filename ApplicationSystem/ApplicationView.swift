@@ -11,6 +11,7 @@ import FirebaseFirestore
 import WebKit
 
 
+
 struct ApplicationView: View {
     @ObservedObject var data = getGameData()
         var body: some View {
@@ -188,6 +189,7 @@ struct ApplicationRecordView : View {
                 
                 Group{
                 Text("出場種目を入力して下さい（登録可能種な種目数をご確認下さい）")
+                    Text("例　男子100m 女子200m 男子走り幅跳び")
                 TextField("1種目", text: $event1)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 4).stroke(self.event1 != "" ? Color("PinkRed") : self.color,lineWidth:  2))
@@ -221,7 +223,7 @@ struct ApplicationRecordView : View {
                     //試合申し込み完了テーブルに入れる
                     db.collection("complete")
                         .document(self.idEmail)
-                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"gamedate":self.data.date,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail, "pass": self.pass, "png": self.data.png, "pay": self.pay])
+                        .setData(["completegamename":self.data.gamename,"completegamevenue":self.data.gamevenue,"completeplace":self.data.place,"gamedate":self.data.date,"event1":self.event1,"event2":self.event2, "event3":self.event3, "name":self.name,"sex":self.sex, "belongTeam":self.belongTeam, "belongPrefecture": self.belongPrefecture, "registrationnumber": self.registrationnumber, "representativeName": self.representativeName, "address": self.address, "phonenumber": self.phonenumber, "idEmail": self.idEmail, "pass": self.pass, "png": self.data.png, "pay": self.pay, "gameemail": self.data.email,"gamepass": self.data.gamepass])
                         { (err) in
                             
             if err != nil{

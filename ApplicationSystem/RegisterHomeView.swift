@@ -10,7 +10,8 @@ import SwiftUI
 
 struct RegisterHomeView: View {
     @State var show = false
-      @State var shows = false
+    @State var shows = false
+    @State var showe = false
     
     var body: some View {
         VStack{
@@ -48,6 +49,23 @@ struct RegisterHomeView: View {
             .sheet(isPresented: self.$shows) {
             Spacer()
             RegisterEntryView()
+            }
+            
+            Button(action: {
+            
+                self.showe.toggle()
+            }){
+                Text("試合内容を変更する")
+                    .foregroundColor(.white)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 50)
+            }
+            .background(Color("PinkRed"))
+            .cornerRadius(10)
+            .padding(.top, 25)
+            .sheet(isPresented: self.$showe) {
+            Spacer()
+            RegisterEditView()
             }
         }
     }
