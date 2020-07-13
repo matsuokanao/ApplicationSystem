@@ -28,7 +28,7 @@ class ApplicationViewModel: ObservableObject {
             "email": email
             
             ]
-        db.collection("gamelist").addDocument(data: data) { error in
+        db.collection("gamelist").addDocument(data: data).setData(data) { error in
             if let error = error {
                 print(error.localizedDescription)
                 return

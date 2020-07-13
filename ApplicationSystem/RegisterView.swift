@@ -14,7 +14,7 @@ import FirebaseFirestore
 
 struct RegisterView: View {
     
-    @ObservedObject var gameaList = ApplicationViewModel()
+    @ObservedObject var gameaList = getGameData()
     @State var gamename = ""
     @State var date = ""
     @State var place = ""
@@ -81,13 +81,22 @@ struct RegisterView: View {
 
 
             }
-
-                    Button(action: {
-                        self.show.toggle()
-                                //試合申し込み完了テーブルに入れる
-                        self.gameaList.addGame(gamename: self.gamename, gamevenue: self.gamevenue, place: self.place, png: self.png, date: self.date,link: self.link,sponsor: self.sponsor,gamepass: self.gamepass,email: self.email)
-
-                            }){
+    Button(action: {
+        self.show.toggle()
+                        
+        let db = Firestore.firestore()
+        //試合申し込み完了テーブルに入れる
+        db.collection("gamelist")
+            .document(self.email)
+            .setData(["gamename":self.gamename,"gamepass":self.gamepass,"gamevenue":self.gamevenue,"date":self.date,"email":self.email,"link":self.link, "place":self.place, "png":self.png,"sponsor":self.sponsor])
+                    { (err) in
+                                        
+                        if err != nil{
+                            print((err?.localizedDescription)!)
+                               return
+                                }
+                            }
+                        }){
                         Text("確定")
                                 .padding(.vertical)
                                 .frame(width: UIScreen.main.bounds.width - 30)
