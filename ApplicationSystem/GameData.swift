@@ -11,16 +11,16 @@ import FirebaseFirestore
 
 
 struct gamelist: Identifiable {
-var id: String
-var gamename: String
-var gamevenue: String
-var place: String
-var png: String
-var date : String
-var link : String
-var sponsor : String
-var gamepass : String
-var email : String
+    var id: String
+    var gamename: String
+    var gamevenue: String
+    var place: String
+    var png: String
+    var date : String
+    var link : String
+    var sponsor : String
+    var gamepass : String
+    var email : String
     
 }
 
@@ -47,7 +47,6 @@ class getGameData : ObservableObject{
                 let sponsor = i.get("sponsor") as! String
                 let gamepass = i.get("gamepass") as! String
                 let email = i.get("email") as! String
-
                 
                 self.datas.append(gamelist(id: id, gamename: gamename, gamevenue: gamevenue, place: place, png: png,date: date,link: link,sponsor: sponsor,gamepass: gamepass,email: email))
             }

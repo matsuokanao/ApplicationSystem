@@ -14,28 +14,29 @@ struct RegisterHomeView: View {
     @State var showe = false
     
     var body: some View {
+        
         VStack{
-    
-    Button(action: {
-        
-            self.show.toggle()
-        }){
-            Text("試合を登録する")
-                .foregroundColor(.white)
-                .padding(.vertical)
-                .frame(width: UIScreen.main.bounds.width - 50)
-        }
-        .background(Color("PinkRed"))
-        .cornerRadius(10)
-        .padding(.top, 25)
-        .sheet(isPresented: self.$show) {
-        Spacer()
-        RegisterView()
-
-        }
-        
-        Button(action: {
             
+            Button(action: {
+                
+                self.show.toggle()
+            }){
+                Text("試合を登録する")
+                    .foregroundColor(.white)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 50)
+            }
+            .background(Color("PinkRed"))
+            .cornerRadius(10)
+            .padding(.top, 25)
+            .sheet(isPresented: self.$show) {
+                Spacer()
+                RegisterView()
+                
+            }
+            
+            Button(action: {
+                
                 self.shows.toggle()
             }){
                 Text("試合のエントリーリストを見る")
@@ -47,12 +48,12 @@ struct RegisterHomeView: View {
             .cornerRadius(10)
             .padding(.top, 25)
             .sheet(isPresented: self.$shows) {
-            Spacer()
-            RegisterEntryView()
+                Spacer()
+                RegisterEntryView()
             }
             
             Button(action: {
-            
+                
                 self.showe.toggle()
             }){
                 Text("試合内容を変更する")
@@ -64,8 +65,8 @@ struct RegisterHomeView: View {
             .cornerRadius(10)
             .padding(.top, 25)
             .sheet(isPresented: self.$showe) {
-            Spacer()
-            RegisterEditView()
+                Spacer()
+                RegisterEditView()
             }
         }
     }
